@@ -1,0 +1,54 @@
+{
+  "id": "marc-jacobs-daisy-dream-edt",
+  "name": "Daisy Dream Eau de Toilette",
+  "brand": "Marc Jacobs",
+  "marketplace": "US",
+  "category": "makeup",
+  "asin": "B00MRR0YJQ",
+  "amazonUrl": "https://www.amazon.com/dp/B00MRR0YJQ",
+  "editorialDescription": "A fruity floral eau de toilette in the Daisy family, in a pale-blue bottle with a daisy-covered cap. Retailer copy for the fragrance lists blackberry, grapefruit and pear on top, jasmine, lychee and blue wisteria in the heart, and white woods, musk and coconut water in the base — an airier, more watery take on the Daisy idea than the original.",
+  "keyFeatures": [
+    "Concentration: eau de toilette",
+    "Top notes: blackberry, grapefruit, pear (per Ulta's listing)",
+    "Heart notes: jasmine, lychee, blue wisteria",
+    "Base notes: white woods, musk, coconut water",
+    "Fragrance family: fruity floral"
+  ],
+  "advantages": [
+    "A published note pyramid makes it easy to compare with the rest of the Daisy line",
+    "Sold in several sizes at major retailers, so you can usually find a smaller bottle or mini to try first"
+  ],
+  "disadvantages": [
+    "Eau de toilette labels aren't standardized, so don't assume a particular strength or wear time",
+    "Fragrance ingredients are listed only as \"fragrance\" on U.S. labels, which makes it hard to screen for a known allergen"
+  ],
+  "suits": [
+    "People who like fresh, fruity florals over heavier or sweeter scents",
+    "Anyone choosing between Daisy flankers who prefers a lighter, watery feel"
+  ],
+  "skipIf": [
+    "You react to fragranced products or have fragrance allergy; FDA notes fragrance ingredients may be listed only as \"fragrance\" on U.S. labels",
+    "You want to smell it on your own skin before committing to a full bottle; look for a travel spray, mini or sample first"
+  ],
+  "buyingConsiderations": [
+    "Check the listing says Daisy Dream (not Daisy, Daisy Love or Daisy Dream Forever) and eau de toilette",
+    "Check bottle size; listings often offer several",
+    "Buy from a listing sold by the brand or Amazon to reduce the risk of counterfeit or old stock"
+  ],
+  "sources": [
+    {
+      "title": "Daisy Dream Eau de Toilette",
+      "publisher": "Ulta Beauty",
+      "url": "https://www.ulta.com/p/daisy-dream-eau-de-toilette-xlsImpprod10861001%3Fsku%3D2276831",
+      "supports": "Note pyramid, fragrance family and concentration",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": null,
+  "availabilityStatus": "unverified",
+  "priceDisplay": "hidden",
+  "editorialRating": null,
+  "linkStatus": "pending",
+  "status": "draft",
+  "researchNotes": "Draft. ASIN B00MRR0YJQ came from the owner's Amazon sponsored link; Amazon could not be opened from the research environment, so the match between this ASIN and 'Marc Jacobs Daisy Dream Eau de Toilette' is inferred and NOT verified. Before publishing: open the listing, confirm the exact name, concentration (EDT/EDP) and size, that it's sold by the brand or Amazon, and that it's in stock; then set linkStatus to verified, availabilityStatus, lastVerified and status to published."
+}

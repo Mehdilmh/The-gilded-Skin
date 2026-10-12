@@ -1,0 +1,60 @@
+{
+  "id": "marc-jacobs-perfect-edt",
+  "name": "Perfect Eau de Toilette",
+  "brand": "Marc Jacobs",
+  "marketplace": "US",
+  "category": "makeup",
+  "asin": "B0BXXF3DJM",
+  "amazonUrl": "https://www.amazon.com/dp/B0BXXF3DJM",
+  "editorialDescription": "A lighter companion to Marc Jacobs' Perfect eau de parfum, in a pale-green bottle with charm-covered cap. Sephora describes it as white florals and cedarwood and lists pink peppercorn, polygonum and cedarwood as key notes; Ulta lists white daffodil as the heart. It's a cleaner, less fruity choice than the Daisy family.",
+  "keyFeatures": [
+    "Concentration: eau de toilette (Perfect is also sold as an eau de parfum and Perfect Intense — check which you're buying)",
+    "Top notes: pink peppercorn, polygonum",
+    "Heart note: white daffodil",
+    "Base note: cedarwood"
+  ],
+  "advantages": [
+    "A good contrast to the Daisy line if you want white florals and wood rather than fruit",
+    "Also sold as a travel spray, which is a lower-commitment way to try it"
+  ],
+  "disadvantages": [
+    "Three versions share the Perfect name, which makes it easy to order the wrong one",
+    "Concentration labels aren't standardized, so wear time varies"
+  ],
+  "suits": [
+    "People who prefer clean, woody florals to sweet or fruity scents",
+    "Shoppers comparing the Perfect line who want the lighter version"
+  ],
+  "skipIf": [
+    "You react to fragranced products or have fragrance allergy; FDA notes fragrance ingredients may be listed only as \"fragrance\" on U.S. labels",
+    "You want to smell it on your own skin before committing to a full bottle; look for a travel spray, mini or sample first"
+  ],
+  "buyingConsiderations": [
+    "Confirm 'Eau de Toilette' in the listing title; the EDP and Intense look similar",
+    "Check bottle size",
+    "Prefer listings sold by the brand or Amazon"
+  ],
+  "sources": [
+    {
+      "title": "Perfect Eau de Toilette",
+      "publisher": "Sephora",
+      "url": "https://www.sephora.com/product/perfect-eau-de-toilette-P504682",
+      "supports": "Key notes and positioning",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "Perfect Eau de Toilette",
+      "publisher": "Ulta Beauty",
+      "url": "https://www.ulta.com/p/perfect-eau-de-toilette-pimprod2037022",
+      "supports": "Note pyramid",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": null,
+  "availabilityStatus": "unverified",
+  "priceDisplay": "hidden",
+  "editorialRating": null,
+  "linkStatus": "pending",
+  "status": "draft",
+  "researchNotes": "Draft. ASIN B0BXXF3DJM came from the owner's Amazon sponsored link; Amazon could not be opened from the research environment, so the match between this ASIN and 'Marc Jacobs Perfect Eau de Toilette' is inferred and NOT verified. Before publishing: open the listing, confirm the exact name, concentration (EDT/EDP) and size, that it's sold by the brand or Amazon, and that it's in stock; then set linkStatus to verified, availabilityStatus, lastVerified and status to published."
+}

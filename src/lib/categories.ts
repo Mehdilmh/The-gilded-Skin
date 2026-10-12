@@ -57,13 +57,13 @@ export const categories: Category[] = [
   },
   {
     slug: "makeup",
-    name: "Makeup",
-    shortName: "Makeup",
-    seoTitle: "Makeup Guides: Complexion, Color and Tools",
+    name: "Makeup & Fragrance",
+    shortName: "Makeup & Fragrance",
+    seoTitle: "Makeup & Fragrance Guides: Complexion, Color, Scent",
     description:
-      "Research-led makeup guides from The Gilded Skin: how to choose complexion products, color and makeup tools, with notes on who each option may suit.",
+      "Research-led makeup and fragrance guides from The Gilded Skin: complexion, color, tools and perfume, with notes on who each option may suit.",
     intro:
-      "Makeup guides are on the way. Like everything we publish, they'll explain what to compare and who each option may suit — not just what's popular.",
+      "How to choose complexion products, color, makeup tools and fragrance — what to compare, what the label does and doesn't tell you, and who each option may suit.",
     pillar: "skin-tint-vs-foundation",
     image: "/images/editorial/makeup-still-life.webp",
     imageAlt: "Illustrated still life of a lipstick, a powder compact and a makeup brush on a cream surface",

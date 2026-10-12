@@ -1,0 +1,54 @@
+{
+  "id": "elizabeth-taylor-white-diamonds-edt",
+  "name": "White Diamonds Eau de Toilette",
+  "brand": "Elizabeth Taylor",
+  "marketplace": "US",
+  "category": "makeup",
+  "asin": "B0009OAI8Q",
+  "amazonUrl": "https://www.amazon.com/dp/B0009OAI8Q",
+  "editorialDescription": "A classic white-floral eau de toilette, launched in 1991 and still widely sold. The Perfume Shop lists lily, neroli and tuberose on top, orris, narcissus and amber in the heart, and sandalwood, patchouli and oakmoss in the base. It's a fuller, more traditional floral than modern fresh florals such as the Daisy line.",
+  "keyFeatures": [
+    "Concentration: eau de toilette",
+    "Launched 1991",
+    "Top notes: lily, neroli, tuberose (per The Perfume Shop)",
+    "Heart notes: orris, narcissus, amber",
+    "Base notes: sandalwood, patchouli, oakmoss"
+  ],
+  "advantages": [
+    "A long-established fragrance with a well-documented note list",
+    "Widely available, usually in several bottle sizes"
+  ],
+  "disadvantages": [
+    "Retailers list somewhat different notes, so expect variation in descriptions",
+    "A traditional floral style that may feel heavy if you prefer fresh, fruity scents"
+  ],
+  "suits": [
+    "People who like classic, full white florals",
+    "Anyone looking for a long-established fragrance rather than a new release"
+  ],
+  "skipIf": [
+    "You react to fragranced products; FDA notes fragrance ingredients may be listed only as \"fragrance\" on U.S. labels",
+    "You prefer light, fresh or fruity scents; try a sample first"
+  ],
+  "buyingConsiderations": [
+    "Confirm 'Eau de Toilette' and the size in the listing title",
+    "Prefer listings sold by the brand or Amazon to reduce counterfeit and old-stock risk",
+    "Check the box is sealed on arrival"
+  ],
+  "sources": [
+    {
+      "title": "White Diamonds Eau de Toilette Spray",
+      "publisher": "The Perfume Shop",
+      "url": "https://www.theperfumeshop.com/elizabeth-taylor/white-diamonds/eau-de-toilette-spray/p/12150EDTJU",
+      "supports": "Note pyramid",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": null,
+  "availabilityStatus": "unverified",
+  "priceDisplay": "hidden",
+  "editorialRating": null,
+  "linkStatus": "pending",
+  "status": "draft",
+  "researchNotes": "Draft. ASIN B0009OAI8Q comes from the owner's Amazon link, whose URL slug names 'Elizabeth Taylor White Diamonds Eau de Toilette'. Amazon could not be opened from the research environment, so the listing itself is NOT verified. Before publishing: confirm the exact name, size and concentration, that it's sold by the brand or Amazon and in stock; then set linkStatus verified, availabilityStatus, lastVerified and status published."
+}

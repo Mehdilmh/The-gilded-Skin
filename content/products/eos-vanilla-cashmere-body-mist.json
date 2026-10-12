@@ -1,0 +1,60 @@
+{
+  "id": "eos-vanilla-cashmere-body-mist",
+  "name": "Cashmere Body Mist, Vanilla Cashmere (6 fl oz)",
+  "brand": "eos",
+  "marketplace": "US",
+  "category": "makeup",
+  "asin": "B0FM2CCBS1",
+  "amazonUrl": "https://www.amazon.com/dp/B0FM2CCBS1",
+  "editorialDescription": "A vanilla-scented body mist from eos's Cashmere line. The listed ingredients start with denatured alcohol, water and fragrance, followed by glycerin, sodium hyaluronate (a form of hyaluronic acid) and aloe leaf juice. It's an inexpensive way to add a light scent, but it isn't a replacement for a moisturizer.",
+  "keyFeatures": [
+    "6 fl oz spray",
+    "Scent: vanilla cashmere",
+    "Ingredients include alcohol denat., water, fragrance, glycerin, sodium hyaluronate and aloe leaf juice (per retailer ingredient lists)",
+    "eos describes it as vegan and cruelty-free"
+  ],
+  "advantages": [
+    "A large bottle for casual, all-over use",
+    "Published ingredient list"
+  ],
+  "disadvantages": [
+    "Alcohol is the first ingredient, which some people with dry or sensitive skin prefer to avoid",
+    "Body mists are generally lighter than perfume, so expect to reapply"
+  ],
+  "suits": [
+    "People who like vanilla scents and want something light for everyday use",
+    "Anyone who prefers a low-commitment scent over a full perfume"
+  ],
+  "skipIf": [
+    "You react to fragranced products; FDA notes fragrance ingredients may be listed only as \"fragrance\" on U.S. labels",
+    "You need real moisture for very dry skin; use a moisturizer"
+  ],
+  "buyingConsiderations": [
+    "Check the scent name (the Cashmere line has several)",
+    "Check the ingredient list on the listing matches the current formula",
+    "Patch-test before spraying widely if your skin is sensitive"
+  ],
+  "sources": [
+    {
+      "title": "Cashmere Body Mist",
+      "publisher": "Ulta Beauty",
+      "url": "https://www.ulta.com/p/cashmere-body-mist-pimprod2057845",
+      "supports": "Ingredient list",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "eos Cashmere Body Mist - Vanilla Cashmere",
+      "publisher": "H-E-B",
+      "url": "https://www.heb.com/product-detail/eos-cashmere-body-mist-vanilla-cashmere/16350597",
+      "supports": "Ingredient list and size",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": null,
+  "availabilityStatus": "unverified",
+  "priceDisplay": "hidden",
+  "editorialRating": null,
+  "linkStatus": "pending",
+  "status": "draft",
+  "researchNotes": "Draft. ASIN B0FM2CCBS1 comes from the owner's Amazon link, whose URL slug names 'eos Cashmere Body Mist Vanilla Cashmere'. Amazon could not be opened from the research environment, so the listing itself is NOT verified. Before publishing: confirm the exact name, size and concentration, that it's sold by the brand or Amazon and in stock; then set linkStatus verified, availabilityStatus, lastVerified and status published."
+}

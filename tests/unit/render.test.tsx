@@ -71,3 +71,22 @@ describe("rendered affiliate components", () => {
     expect(renderToStaticMarkup(<SiteFooter />)).toContain("As an Amazon Associate I earn from qualifying purchases.");
   });
 });
+
+describe("ShopOnAmazon", () => {
+  it("links to a tagged Amazon category page when given a node", async () => {
+    vi.stubEnv("AMAZON_ASSOCIATE_TAG", "gettse00-20");
+    const { ShopOnAmazon } = await import("@/components/affiliate/ShopOnAmazon");
+    const html = renderToStaticMarkup(<ShopOnAmazon node="11056931" label="Browse fragrances" />);
+    expect(html).toContain("https://www.amazon.com/b?node=11056931&amp;tag=gettse00-20");
+    expect(html).toContain('rel="sponsored nofollow noopener noreferrer"');
+    expect(html).toContain("Opens Amazon category page");
+    vi.unstubAllEnvs();
+  });
+
+  it("renders nothing for a non-numeric node and no query", async () => {
+    vi.stubEnv("AMAZON_ASSOCIATE_TAG", "gettse00-20");
+    const { ShopOnAmazon } = await import("@/components/affiliate/ShopOnAmazon");
+    expect(renderToStaticMarkup(<ShopOnAmazon node="abc" label="x" />)).toBe("");
+    vi.unstubAllEnvs();
+  });
+});

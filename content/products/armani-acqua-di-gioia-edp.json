@@ -1,0 +1,61 @@
+{
+  "id": "armani-acqua-di-gioia-edp",
+  "name": "Acqua di Gioia Eau de Parfum",
+  "brand": "Giorgio Armani",
+  "marketplace": "US",
+  "category": "makeup",
+  "asin": "B00BEG9QXG",
+  "amazonUrl": "https://www.amazon.com/dp/B00BEG9QXG",
+  "editorialDescription": "A fresh aquatic-floral eau de parfum from Armani Beauty, in a sea-glass green bottle with a pebble-shaped cap. Armani's own pages list primofiore lemon and mint on top, jasmine (Armani calls it water jasmine) and peony in the heart, and cedar with a brown-sugar accord in the base — fresher and less sweet than most fruity florals.",
+  "keyFeatures": [
+    "Concentration: eau de parfum",
+    "Top notes: primofiore lemon, crushed mint",
+    "Heart notes: jasmine, peony",
+    "Base notes: cedarwood, brown sugar accord",
+    "Armani describes the base as amber-woody"
+  ],
+  "advantages": [
+    "Note details are published on Armani's own site",
+    "A fresh, citrus-and-mint profile that's a clear alternative to sweeter florals"
+  ],
+  "disadvantages": [
+    "Armani's regional sites word the notes slightly differently, so don't expect identical descriptions everywhere",
+    "Concentration labels aren't standardized"
+  ],
+  "suits": [
+    "People who like fresh, aquatic or citrus scents",
+    "Anyone who wants a daytime fragrance that isn't fruity-sweet"
+  ],
+  "skipIf": [
+    "You react to fragranced products or have fragrance allergy; FDA notes fragrance ingredients may be listed only as \"fragrance\" on U.S. labels",
+    "You want to smell it on your own skin before committing to a full bottle; look for a travel spray, mini or sample first"
+  ],
+  "buyingConsiderations": [
+    "Confirm the listing is Acqua di Gioia eau de parfum (not Acqua di Giò, the men's line, or a different Acqua di Gioia version)",
+    "Check bottle size",
+    "Prefer listings sold by the brand or Amazon"
+  ],
+  "sources": [
+    {
+      "title": "Acqua di Gioia Eau de Parfum",
+      "publisher": "Armani Beauty Canada",
+      "url": "https://www.armani-beauty.ca/en_CA/fragrances/women-s-fragrances/acqua-di-gioia-eau-de-parfum/ww-00378-arm.html",
+      "supports": "Notes and fragrance family",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "Acqua di Gioia Eau de Parfum",
+      "publisher": "Giorgio Armani Beauty Australia",
+      "url": "https://www.giorgioarmanibeauty.com.au/fragrances/womens-fragrances/acqua-di-gioia/acqua-di-gioia-eau-de-parfum/ww-00378-arm.html",
+      "supports": "Notes",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": null,
+  "availabilityStatus": "unverified",
+  "priceDisplay": "hidden",
+  "editorialRating": null,
+  "linkStatus": "pending",
+  "status": "draft",
+  "researchNotes": "Draft. ASIN B00BEG9QXG came from the owner's Amazon sponsored link; Amazon could not be opened from the research environment, so the match between this ASIN and 'Giorgio Armani Acqua di Gioia Eau de Parfum' is inferred and NOT verified. Before publishing: open the listing, confirm the exact name, concentration (EDT/EDP) and size, that it's sold by the brand or Amazon, and that it's in stock; then set linkStatus to verified, availabilityStatus, lastVerified and status to published."
+}

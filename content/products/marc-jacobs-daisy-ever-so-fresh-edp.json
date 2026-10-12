@@ -1,0 +1,61 @@
+{
+  "id": "marc-jacobs-daisy-ever-so-fresh-edp",
+  "name": "Daisy Ever So Fresh Eau de Parfum",
+  "brand": "Marc Jacobs",
+  "marketplace": "US",
+  "category": "makeup",
+  "asin": "B0B8LSKQCP",
+  "amazonUrl": "https://www.amazon.com/dp/B0B8LSKQCP",
+  "editorialDescription": "A fruity floral eau de parfum in the Daisy family, in a peach-toned bottle with yellow, white and apricot daisies on the cap. Retailer listings that reproduce the brand's copy give mandarin, mango and pineapple on top, rosewater and orange blossom in the heart, and cashmere woods in the base — a juicier, sunnier variation than the original Daisy.",
+  "keyFeatures": [
+    "Concentration: eau de parfum",
+    "Top notes: mandarin, mango, pineapple",
+    "Heart notes: rosewater, orange blossom",
+    "Base notes: cashmere woods",
+    "Sephora lists key notes as mango, rose water and cashmere woods"
+  ],
+  "advantages": [
+    "Clear published notes for a tropical-fruit take on the Daisy line",
+    "An eau de parfum label, which brands generally use for a more concentrated formula than their eau de toilette"
+  ],
+  "disadvantages": [
+    "Concentration labels aren't regulated, so strength and wear time vary by formula and person",
+    "Tropical fruit notes are a matter of taste; try a sample if you usually prefer dry or green scents"
+  ],
+  "suits": [
+    "People who like bright, fruity florals",
+    "Anyone who finds the original Daisy too soft and wants something juicier"
+  ],
+  "skipIf": [
+    "You react to fragranced products or have fragrance allergy; FDA notes fragrance ingredients may be listed only as \"fragrance\" on U.S. labels",
+    "You want to smell it on your own skin before committing to a full bottle; look for a travel spray, mini or sample first"
+  ],
+  "buyingConsiderations": [
+    "Check the listing says Daisy Ever So Fresh and eau de parfum",
+    "Check bottle size",
+    "Prefer listings sold by the brand or Amazon"
+  ],
+  "sources": [
+    {
+      "title": "Daisy Ever So Fresh Eau de Parfum",
+      "publisher": "Sephora",
+      "url": "https://sephora.com/product/daisy-ever-so-fresh-eau-de-parfum-P501021",
+      "supports": "Key notes and fragrance family",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "Marc Jacobs Daisy Ever So Fresh Eau de Parfum 30ml",
+      "publisher": "Superdrug",
+      "url": "https://www.superdrug.com/fragrance/perfume-for-women/womens-perfume/marc-jacobs-daisy-ever-so-fresh-eau-de-parfum-30ml/p/821665",
+      "supports": "Full note pyramid",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": null,
+  "availabilityStatus": "unverified",
+  "priceDisplay": "hidden",
+  "editorialRating": null,
+  "linkStatus": "pending",
+  "status": "draft",
+  "researchNotes": "Draft. ASIN B0B8LSKQCP came from the owner's Amazon sponsored link; Amazon could not be opened from the research environment, so the match between this ASIN and 'Marc Jacobs Daisy Ever So Fresh Eau de Parfum' is inferred and NOT verified. Before publishing: open the listing, confirm the exact name, concentration (EDT/EDP) and size, that it's sold by the brand or Amazon, and that it's in stock; then set linkStatus to verified, availabilityStatus, lastVerified and status to published."
+}

@@ -127,7 +127,7 @@ async function main() {
         }
         if (u.hostname !== "www.amazon.com") add("error", path, `Amazon link on ${u.hostname} (expected www.amazon.com): ${href}`);
         if (u.searchParams.get("tag") !== TAG) add("error", path, `Amazon link without tag=${TAG}: ${href}`);
-        if (!/\/dp\/[A-Z0-9]{10}/.test(u.pathname) && u.pathname !== "/s") add("warning", path, `Amazon link is neither a product page nor a search: ${href}`);
+        if (!/\/dp\/[A-Z0-9]{10}/.test(u.pathname) && u.pathname !== "/s" && !(u.pathname === "/b" && /^\d+$/.test(u.searchParams.get("node") ?? ""))) add("warning", path, `Amazon link is not a product, search or category page: ${href}`);
         if (!/sponsored/.test(attr(tag, "rel") ?? "")) add("error", path, `Amazon link missing rel="sponsored": ${href}`);
       }
     }
