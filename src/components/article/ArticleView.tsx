@@ -1,4 +1,4 @@
-import { getAuthor, getImage, getPublicProduct, getRelatedArticles, type Article } from "@/lib/content";
+import { articleHasAffiliateLinks, getAuthor, getImage, getRelatedArticles, type Article } from "@/lib/content";
 import { getCategory } from "@/lib/categories";
 import { articleJsonLd, faqJsonLd } from "@/lib/structured-data";
 import { MdxContent } from "./MdxContent";
@@ -26,7 +26,7 @@ export function ArticleView({ article }: { article: Article }) {
   const reviewer = article.reviewer ? getAuthor(article.reviewer) : undefined;
   const image = getImage(article.featuredImage);
   const related = getRelatedArticles(article);
-  const hasAffiliateLinks = article.products.some((id) => getPublicProduct(id));
+  const hasAffiliateLinks = articleHasAffiliateLinks(article);
 
   return (
     <article>

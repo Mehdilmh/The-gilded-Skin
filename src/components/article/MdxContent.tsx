@@ -7,6 +7,7 @@ import { Callout, Checklist, ComparisonTable } from "./Blocks";
 import { ProsCons, SuitsSkip } from "./ProsCons";
 import { ProductCard, ProductComparison } from "@/components/affiliate/ProductCard";
 import { EditorialImage } from "@/components/ui/EditorialImage";
+import { ShopOnAmazon } from "@/components/affiliate/ShopOnAmazon";
 
 function SmartLink({ href = "", children, ...rest }: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
   if (href.startsWith("/") || href.startsWith("#")) {
@@ -50,6 +51,7 @@ const components = {
   SuitsSkip,
   ProductCard,
   ProductComparison,
+  ShopOnAmazon,
   Figure,
 };
 

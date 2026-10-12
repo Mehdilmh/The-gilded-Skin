@@ -255,3 +255,8 @@ export function getAuthors(): Author[] {
 export function getAuthor(id: string): Author | undefined {
   return getAuthors().find((a) => a.id === id);
 }
+
+/** True when an article renders any affiliate link (verified product or tagged Amazon search). */
+export function articleHasAffiliateLinks(article: Pick<Article, "products" | "body">): boolean {
+  return article.products.some((id) => getPublicProduct(id)) || /<ShopOnAmazon\b/.test(article.body);
+}

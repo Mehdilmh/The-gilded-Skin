@@ -9,7 +9,7 @@
 import "./_env";
 import fs from "node:fs";
 import path from "node:path";
-import { getPublicProduct, getPublishedArticles } from "../src/lib/content";
+import { articleHasAffiliateLinks, getPublishedArticles } from "../src/lib/content";
 import { absoluteUrl } from "../src/lib/site";
 import { withUtm } from "../src/lib/affiliate";
 
@@ -17,7 +17,7 @@ const csv = (v: string) => `"${v.replace(/"/g, '""')}"`;
 const rows = [["Title", "Media URL", "Pinterest board", "Description", "Link", "Keywords", "Template", "Image concept"].join(",")];
 
 for (const a of getPublishedArticles()) {
-  const affiliate = a.products.some((id) => getPublicProduct(id));
+  const affiliate = articleHasAffiliateLinks(a);
   a.pinterest.pins.forEach((pin, i) => {
     const link = withUtm(absoluteUrl(`/${a.slug}`), { source: "pinterest", medium: "social", campaign: a.slug, content: `pin-${i + 1}` });
     const description = affiliate ? `${pin.description} This guide contains affiliate links.` : pin.description;

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getAllArticles, getPublicProduct } from "@/lib/content";
+import { articleHasAffiliateLinks, getAllArticles } from "@/lib/content";
 import { absoluteUrl } from "@/lib/site";
 import { withUtm } from "@/lib/affiliate";
 
@@ -15,7 +15,7 @@ export default function StudioPinterest() {
       </p>
       <div className="mt-10 space-y-16">
         {articles.map((a) => {
-          const affiliate = a.products.some((id) => getPublicProduct(id));
+          const affiliate = articleHasAffiliateLinks(a);
           return (
             <section key={a.slug}>
               <h2 className="font-serif text-2xl">{a.title}</h2>
