@@ -34,7 +34,7 @@ export function ProductCard({ id, rank, heading }: { id: string; rank?: number; 
           {product.image ? (
             <EditorialImage src={product.image} sizes="(min-width: 768px) 40vw, 100vw" showKindLabel />
           ) : (
-            <div className="flex aspect-square flex-col items-center justify-center gap-4 rounded-card border border-champagne/40 bg-ivory p-6 text-center">
+            <div className="flex flex-col items-center justify-center gap-3 rounded-card border border-champagne/40 bg-ivory px-6 py-6 text-center md:aspect-square md:gap-4">
               <StarMark className="h-8 w-8 text-champagne" />
               <p className="font-serif text-xl leading-snug">{product.brand ?? product.name}</p>
               <a
@@ -57,6 +57,12 @@ export function ProductCard({ id, rank, heading }: { id: string; rank?: number; 
           {rank !== undefined && <p className="eyebrow">Option {rank}</p>}
           <h3 className="mt-1 font-serif text-3xl leading-tight">{heading ?? product.name}</h3>
           {product.brand && <p className="mt-1 text-sm text-taupe-dark">by {product.brand}</p>}
+          {product.suits[0] && (
+            <p className="mt-4 rounded-card bg-beige/50 px-3 py-2 text-sm leading-snug">
+              <span className="font-semibold text-champagne-dark">Best for: </span>
+              {product.suits[0]}
+            </p>
+          )}
           <p className="mt-4 leading-relaxed text-espresso/85">{product.editorialDescription}</p>
           {product.keyFeatures.length > 0 && (
             <ul className="mt-4 list-disc space-y-1.5 pl-5 text-[0.95rem] marker:text-champagne">
@@ -78,6 +84,19 @@ export function ProductCard({ id, rank, heading }: { id: string; rank?: number; 
       <div className="border-t border-beige px-6 md:px-8">
         <ProsCons pros={product.advantages} cons={product.disadvantages} headingLevel="h4" />
         {(product.suits.length > 0 || product.skipIf.length > 0) && <SuitsSkip suits={product.suits} skip={product.skipIf} subject="it" headingLevel="h4" />}
+        {product.buyingConsiderations.length > 0 && (
+          <div className="mb-8">
+            <h4 className="eyebrow">Check before you buy</h4>
+            <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[0.95rem] leading-relaxed marker:text-champagne">
+              {product.buyingConsiderations.map((c) => (
+                <li key={c}>{c}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <div className="mb-8 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-beige pt-6">
+          <AffiliateButton link={link} productId={product.id} placement="product-card-bottom" cta="listing" />
+        </div>
       </div>
     </section>
   );
@@ -98,35 +117,33 @@ export function ProductComparison({ ids, caption }: { ids: string[]; caption: st
   }
   return (
     <div className="not-prose my-10" data-testid="product-comparison">
-      <div className="scroll-region" role="region" aria-label={caption} tabIndex={0}>
-        <table className="w-full min-w-[44rem] border-collapse text-left text-[0.92rem] leading-relaxed">
-          <caption className="mb-3 text-left font-serif text-xl">{caption}</caption>
-          <thead>
-            <tr className="border-b border-champagne text-eyebrow font-semibold uppercase text-champagne-dark">
-              <th scope="col" className="sticky left-0 bg-ivory px-4 py-3">Product</th>
-              <th scope="col" className="px-4 py-3">Best for</th>
-              <th scope="col" className="px-4 py-3">Strengths</th>
-              <th scope="col" className="px-4 py-3">Limitations</th>
-              <th scope="col" className="px-4 py-3">Before you buy</th>
-              <th scope="col" className="px-4 py-3"><span className="sr-only">Retailer link</span></th>
+      <table className="responsive-table w-full border-collapse text-left text-[0.92rem] leading-relaxed">
+        <caption className="mb-3 text-left font-serif text-xl">{caption}</caption>
+        <thead>
+          <tr className="border-b border-champagne text-eyebrow font-semibold uppercase text-champagne-dark">
+            <th scope="col" className="bg-ivory px-4 py-3">Product</th>
+            <th scope="col" className="px-4 py-3">Best for</th>
+            <th scope="col" className="px-4 py-3">Strengths</th>
+            <th scope="col" className="px-4 py-3">Limitations</th>
+            <th scope="col" className="px-4 py-3">Before you buy</th>
+            <th scope="col" className="px-4 py-3"><span className="sr-only">Retailer link</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map(({ p, link }) => (
+            <tr key={p.id} className="border-b border-beige align-top">
+              <th scope="row" className="bg-ivory px-4 py-4 font-serif text-lg font-medium">{p.name}</th>
+              <td data-label="Best for" className="px-4 py-4">{p.suits[0] ?? "—"}</td>
+              <td data-label="Strengths" className="px-4 py-4">{p.advantages.slice(0, 2).join("; ")}</td>
+              <td data-label="Limitations" className="px-4 py-4">{p.disadvantages.slice(0, 2).join("; ")}</td>
+              <td data-label="Before you buy" className="px-4 py-4">{p.buyingConsiderations[0] ?? "—"}</td>
+              <td data-label="Retailer" className="px-4 py-4">
+                <AffiliateButton link={link} productId={p.id} placement="comparison-table" cta="listing" variant="text" />
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {rows.map(({ p, link }) => (
-              <tr key={p.id} className="border-b border-beige align-top">
-                <th scope="row" className="sticky left-0 bg-ivory px-4 py-4 font-serif text-lg font-medium">{p.name}</th>
-                <td className="px-4 py-4">{p.suits[0] ?? "—"}</td>
-                <td className="px-4 py-4">{p.advantages.slice(0, 2).join("; ")}</td>
-                <td className="px-4 py-4">{p.disadvantages.slice(0, 2).join("; ")}</td>
-                <td className="px-4 py-4">{p.buyingConsiderations[0] ?? "—"}</td>
-                <td className="px-4 py-4">
-                  <AffiliateButton link={link} productId={p.id} placement="comparison-table" cta="listing" variant="text" />
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

@@ -86,32 +86,28 @@ export function ArticleView({ article }: { article: Article }) {
       </header>
 
       <div className="container max-w-wide">
-        <div className="grid gap-12 py-12 lg:grid-cols-12 lg:gap-14">
-          <aside className="order-2 hidden lg:order-1 lg:col-span-3 lg:block">
-            <div className="sticky top-32 space-y-6">
-              <TableOfContents items={article.toc} />
-              <PinterestShare article={article} />
-            </div>
-          </aside>
-          <div className="order-1 min-w-0 lg:order-2 lg:col-span-8 lg:col-start-5">
+        {/* One table of contents and one share button: beside the article on desktop,
+            between the introduction and the body on mobile (same element, CSS grid placement). */}
+        <div className="grid gap-y-10 py-12 lg:grid-cols-12 lg:gap-x-14">
+          <div className="min-w-0 lg:col-span-8 lg:col-start-5 lg:row-start-1">
             <div className="max-w-prose space-y-8">
               <AffiliateDisclosure hasAffiliateLinks={hasAffiliateLinks} />
               {article.quickAnswer && <QuickAnswer>{article.quickAnswer}</QuickAnswer>}
               <KeyTakeaways items={article.keyTakeaways} />
-              <div className="lg:hidden">
-                <TableOfContents items={article.toc} />
-              </div>
             </div>
-            <div className="mt-10">
-              <MdxContent source={article.body} />
+          </div>
+          <aside aria-label="Article tools" className="max-w-prose lg:col-span-3 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:max-w-none">
+            <div className="space-y-6 lg:sticky lg:top-32">
+              <TableOfContents items={article.toc} />
+              <PinterestShare article={article} />
             </div>
+          </aside>
+          <div className="min-w-0 lg:col-span-8 lg:col-start-5 lg:row-start-2">
+            <MdxContent source={article.body} />
             <div className="max-w-prose">
               <Faq items={article.faq} />
               <HowWeResearched article={article} />
               <SourceList sources={article.sources} />
-              <div className="mt-10 flex flex-wrap items-center gap-4 lg:hidden">
-                <PinterestShare article={article} />
-              </div>
               <AuthorBox author={author} reviewer={reviewer} />
             </div>
           </div>

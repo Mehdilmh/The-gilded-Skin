@@ -78,6 +78,37 @@
   .article-prose :where(table) {
     @apply text-base;
   }
+  /* Comparison tables: real tables on md+, labeled cards on phones. */
+  @media (max-width: 767px) {
+    .responsive-table thead {
+      @apply sr-only;
+    }
+    .responsive-table,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table th,
+    .responsive-table td {
+      display: block;
+      width: 100%;
+    }
+    .responsive-table tr {
+      @apply mb-4 overflow-hidden rounded-card border border-beige bg-white;
+    }
+    .responsive-table tbody th {
+      @apply border-b border-beige bg-beige/40;
+    }
+    .responsive-table td {
+      @apply bg-white px-4 py-2.5;
+    }
+    .responsive-table td::before {
+      content: attr(data-label);
+      @apply mb-0.5 block text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-champagne-dark;
+    }
+    .responsive-table td:empty,
+    .responsive-table td:empty::before {
+      display: none;
+    }
+  }
   .scroll-region {
     @apply -mx-5 overflow-x-auto px-5 md:mx-0 md:px-0;
   }

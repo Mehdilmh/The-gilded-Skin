@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   trailingSlash: false,
+  // Always render <title>, canonical and other metadata in <head>, even on
+  // dynamic pages (contact, search). Search engines ignore canonicals in <body>.
+  htmlLimitedBots: /.*/,
   pageExtensions: ["ts", "tsx"],
   images: {
     formats: ["image/avif", "image/webp"],

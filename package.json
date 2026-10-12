@@ -25,7 +25,8 @@
     "audit:launch": "tsx scripts/audit-content.ts --launch",
     "products:template": "tsx scripts/products.ts template",
     "products:import": "tsx scripts/products.ts import",
-    "products:export": "tsx scripts/products.ts export"
+    "products:export": "tsx scripts/products.ts export",
+    "audit:site": "tsx scripts/site-audit.ts"
   },
   "dependencies": {
     "@fontsource-variable/cormorant-garamond": "^5.3.0",

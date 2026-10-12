@@ -63,50 +63,42 @@ export function QuickAnswer({ children }: { children: React.ReactNode }) {
 }
 
 /**
- * Accessible comparison table for product *types* or criteria. Scrolls
- * horizontally on small screens with a sticky first column.
+ * Accessible comparison table for product *types* or criteria. A real table
+ * from the md breakpoint up; on phones each row becomes a labeled card so no
+ * column is hidden behind horizontal scrolling.
  */
 export function ComparisonTable({ caption, columns, rows }: { caption: string; columns: string[]; rows: string[][] }) {
   return (
     <div className="not-prose my-10">
-      <p aria-hidden="true" className="mb-2 text-xs uppercase tracking-[0.12em] text-taupe-dark md:hidden">
-        Swipe to see the full table →
-      </p>
-      <div className="scroll-region" role="region" aria-label={caption} tabIndex={0}>
-        <table className="w-full min-w-[40rem] border-collapse text-left text-[0.92rem] leading-relaxed">
-          <caption className="mb-3 text-left font-serif text-xl text-espresso">{caption}</caption>
-          <thead>
-            <tr className="border-b border-champagne">
-              {columns.map((c, i) => (
-                <th
-                  key={c}
-                  scope="col"
-                  className={`bg-ivory px-4 py-3 align-bottom text-eyebrow font-semibold uppercase text-champagne-dark ${i === 0 ? "sticky left-0 z-10" : ""}`}
-                >
-                  {c}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row) => (
-              <tr key={row[0]} className="border-b border-beige align-top">
-                {row.map((cell, i) =>
-                  i === 0 ? (
-                    <th key={i} scope="row" className="sticky left-0 z-10 bg-ivory px-4 py-4 font-serif text-lg font-medium text-espresso">
-                      {cell}
-                    </th>
-                  ) : (
-                    <td key={i} className="bg-white/60 px-4 py-4 text-espresso/85">
-                      {cell}
-                    </td>
-                  ),
-                )}
-              </tr>
+      <table className="responsive-table w-full border-collapse text-left text-[0.92rem] leading-relaxed">
+        <caption className="mb-3 text-left font-serif text-xl text-espresso">{caption}</caption>
+        <thead>
+          <tr className="border-b border-champagne">
+            {columns.map((c) => (
+              <th key={c} scope="col" className="bg-ivory px-4 py-3 align-bottom text-eyebrow font-semibold uppercase text-champagne-dark">
+                {c}
+              </th>
             ))}
-          </tbody>
-        </table>
-      </div>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row[0]} className="border-b border-beige align-top">
+              {row.map((cell, i) =>
+                i === 0 ? (
+                  <th key={i} scope="row" className="bg-ivory px-4 py-4 font-serif text-lg font-medium text-espresso">
+                    {cell}
+                  </th>
+                ) : (
+                  <td key={i} data-label={columns[i]} className="bg-white/60 px-4 py-4 text-espresso/85">
+                    {cell}
+                  </td>
+                ),
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
