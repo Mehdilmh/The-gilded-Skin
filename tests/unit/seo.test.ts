@@ -119,3 +119,14 @@ describe("structured data", () => {
     expect(serializeJsonLd({ x: "</script>" })).not.toContain("</script>");
   });
 });
+
+describe("title length", () => {
+  it("drops the brand suffix when it would push the title past the limit", async () => {
+    const { pageMetadata, MAX_TITLE_LENGTH } = await import("@/lib/seo");
+    const short = pageMetadata({ title: "Short", description: "d", path: "/x" });
+    expect(short.title).toBe("Short");
+    const longTitle = "A".repeat(MAX_TITLE_LENGTH - 5);
+    const long = pageMetadata({ title: longTitle, description: "d", path: "/x" });
+    expect(long.title).toEqual({ absolute: longTitle });
+  });
+});

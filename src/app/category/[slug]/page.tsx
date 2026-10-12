@@ -43,6 +43,9 @@ export default async function CategoryPage({ params }: Params) {
   const category = getCategory(slug);
   if (!category) notFound();
   const articles = getArticlesByCategory(slug);
+  // The category's "start here" guide is featured first; the rest follow.
+  const pillar = articles.find((a) => a.slug === category.pillar);
+  const rest = pillar ? articles.filter((a) => a !== pillar) : articles;
   const others = categories.filter((c) => c.slug !== slug);
   const products = getAllProducts().filter((p) => p.category === slug && getPublicProduct(p.id));
   const browse = category.amazonBrowse ? buildBrowseLink(category.amazonBrowse.url) : null;
@@ -59,10 +62,20 @@ export default async function CategoryPage({ params }: Params) {
         intro={<p>{category.intro}</p>}
       />
       <div className="container max-w-wide py-14">
+        {pillar && (
+          <section aria-labelledby="start-here" className="mb-16 border-b border-beige pb-16" data-testid="category-pillar">
+            <h2 id="start-here" className="eyebrow mb-6">
+              Start here
+            </h2>
+            <div className="max-w-3xl">
+              <ArticleCard article={pillar} variant="feature" headingLevel="h3" priority />
+            </div>
+          </section>
+        )}
         {articles.length > 0 ? (
           <div className="grid gap-x-10 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
-            {articles.map((a, i) => (
-              <ArticleCard key={a.slug} article={a} headingLevel="h2" priority={i < 3} />
+            {rest.map((a, i) => (
+              <ArticleCard key={a.slug} article={a} headingLevel="h2" priority={!pillar && i < 3} />
             ))}
           </div>
         ) : (

@@ -15,6 +15,9 @@ export interface PageSeoInput {
   absoluteTitle?: boolean;
 }
 
+/** Titles longer than this tend to be truncated in search results. */
+export const MAX_TITLE_LENGTH = 70;
+
 /**
  * Build Next.js metadata for a page. Every indexable page gets a canonical URL
  * on the production domain, Open Graph and Twitter tags, and robots rules that
@@ -24,9 +27,12 @@ export function pageMetadata(input: PageSeoInput): Metadata {
   const canonical = absoluteUrl(input.path);
   const index = !input.noindex && isIndexableEnvironment();
   const image = absoluteUrl(input.image ?? site.defaultOgImage);
-  const fullTitle = input.absoluteTitle ? input.title : `${input.title} | ${site.name}`;
+  // Long titles drop the brand suffix so search results don't truncate them.
+  const suffixed = `${input.title} | ${site.name}`;
+  const absolute = input.absoluteTitle || suffixed.length > MAX_TITLE_LENGTH;
+  const fullTitle = absolute ? input.title : suffixed;
   return {
-    title: input.absoluteTitle ? { absolute: input.title } : input.title,
+    title: absolute ? { absolute: input.title } : input.title,
     description: input.description,
     alternates: { canonical },
     robots: index
