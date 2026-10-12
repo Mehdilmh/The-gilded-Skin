@@ -235,7 +235,7 @@ export default function HomePage() {
             },
           ].map((item) => (
             <div key={item.n} className="flex flex-col rounded-card border border-beige bg-white p-7">
-              <span className="font-serif text-4xl text-champagne">{item.n}</span>
+              <span className="font-serif text-4xl text-champagne-dark">{item.n}</span>
               <h3 className="mt-4 font-serif text-2xl">{item.title}</h3>
               <p className="mt-3 flex-1 leading-relaxed text-espresso/80">{item.body}</p>
               <Link href={item.href} className="mt-6 inline-flex items-center gap-2 text-sm font-medium hover:text-champagne-dark">
