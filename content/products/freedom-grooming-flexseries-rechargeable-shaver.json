@@ -1,24 +1,76 @@
 {
   "id": "freedom-grooming-flexseries-rechargeable-shaver",
-  "name": "Freedom Grooming FlexSeries rechargeable shaver (exact name to confirm)",
-  "brand": "Freedom Grooming",
+  "name": "FlexSeries Shaving Kit",
+  "brand": "Freebird",
   "marketplace": "US",
   "category": "beauty-tools",
   "amazonUrl": "https://www.amazon.com/dp/B08KSRYGW4",
   "asin": "B08KSRYGW4",
-  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
-  "keyFeatures": [],
-  "advantages": [],
-  "disadvantages": [],
-  "suits": [],
-  "skipIf": [],
-  "buyingConsiderations": [],
-  "sources": [],
-  "lastVerified": null,
-  "availabilityStatus": "unverified",
+  "editorialDescription": "A rotary head shaver kit built around snap-on attachments: a five-blade rotary head, a precision clipper with 3, 5 and 7mm guards, a nose-and-ear trimmer, an exfoliating brush and a scalp scrubber. It's designed mainly for shaving your head, with face and body grooming as extras. Freebird was previously called Freedom Grooming. Its own pages disagree on a few specs, such as the water-resistance rating and runtime, so we show those as ranges.",
+  "keyFeatures": [
+    "Five-blade rotary shaving head plus four snap-on attachments",
+    "USB charging; the Amazon listing says about 90 minutes to charge for up to 90 minutes of use, while Freebird's site says a 60-minute charge",
+    "Wet or dry use; Freebird lists the rating as IPX5 or IPX6 depending on the page, and the listing advises keeping it out of direct water flow",
+    "Freebird suggests replacing the rotary blade about every 50 shaves (the listing says every 4 weeks)",
+    "Includes a USB cable and a cleaning brush; model FS1-1-US"
+  ],
+  "advantages": [
+    "Many attachments in one kit; the instructions have you clip long hair first and then shave",
+    "A rotary head designed to follow the curves of the scalp",
+    "A 3-year standard warranty, extended to lifetime with an active blade subscription, per Freebird's FAQ",
+    "Freebird says opened and used shavers can be returned within its trial period"
+  ],
+  "disadvantages": [
+    "Replacement blades are an ongoing cost",
+    "Specifications (water rating, runtime, trial length) are inconsistent across Freebird's own pages",
+    "Not designed to be submerged or used under running water",
+    "Long, dense hair needs trimming first or the rotary head struggles",
+    "'No bumps or irritation' wording is a brand claim; results vary with skin and technique"
+  ],
+  "suits": [
+    "People who shave their head regularly",
+    "Anyone who wants one kit for head, face and body grooming",
+    "Travellers who like USB charging"
+  ],
+  "skipIf": [
+    "You only trim and never shave to the skin",
+    "You don't want to buy replacement blades",
+    "You want a fully waterproof shaver for use in the shower"
+  ],
+  "buyingConsiderations": [
+    "This is the original five-blade FlexSeries; the FlexSeries Pro is a separate four-blade model rated IPX7",
+    "Read the warranty terms; lifetime coverage depends on a blade subscription",
+    "Check that the seller is Freebird Headcare",
+    "Budget for blade refills"
+  ],
+  "sources": [
+    {
+      "title": "FlexSeries Shaving Kit",
+      "publisher": "Freebird",
+      "url": "https://www.myfreebird.com/products/flexseries-kit",
+      "supports": "Kit contents, charging, water rating, blade life, warranty and returns",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "Freebird FlexSeries vs. FlexSeries Pro",
+      "publisher": "Freebird",
+      "url": "https://www.myfreebird.com/blogs/grooming/freebird-flexseries-pro-vs-original-flexseries",
+      "supports": "Differences between the original and Pro models",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "Freebird FlexSeries Electric Head & Body Hair Shaver",
+      "publisher": "Amazon.com",
+      "url": "https://www.amazon.com/dp/B08KSRYGW4",
+      "supports": "Listing identity, model number, attachments, seller (Freebird Headcare) and availability",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": "2026-10-12",
+  "availabilityStatus": "verified-available",
   "priceDisplay": "hidden",
   "editorialRating": null,
-  "linkStatus": "pending",
-  "status": "draft",
-  "researchNotes": "From a sponsored Amazon result; confirm model and what's included. Imported from spreadsheet row 2."
+  "linkStatus": "verified",
+  "status": "published",
+  "researchNotes": "Verified 2026-10-12. The brand now trades as Freebird (myfreebird.com). Amazon listing B08KSRYGW4 is sold by Freebird Headcare and showed In Stock. Water rating (IPX5 vs IPX6), runtime and trial length conflict across Freebird pages, so they're shown as ranges."
 }

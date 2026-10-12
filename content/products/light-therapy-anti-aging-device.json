@@ -19,5 +19,5 @@
   "editorialRating": null,
   "linkStatus": "pending",
   "status": "draft",
-  "researchNotes": "From a sponsored Amazon result whose title uses 'laser' and 'anti-aging result' claims. Verify what the device actually is, its wavelengths and any FDA 510(k) record; do not repeat results claims. Imported from spreadsheet row 2. Intended for published article \"led-face-masks-what-to-compare\" — add it to that article's products list once this product is published."
+  "researchNotes": "Reviewed 2026-10-12: NIRA Pro 3 (sold by NIRA Skincare). Not published: the title says 'FDA Laser', 'Clinically Proven', 'Result in 60-90 Days' and 'Better Results than Red Light Mask'. The listing gives a 1045nm wavelength, but NIRA's FDA 510(k) clearances (K163137, 2017, and K222685, 2023, both Dermal Photonics Corp.) cover 1450nm devices. No 510(k) for a 'Pro 3' was found in openFDA. nira.com belongs to an unrelated company. Recheck if NIRA publishes the Pro 3 K number. Previous note: From a sponsored Amazon result whose title uses 'laser' and 'anti-aging result' claims. Verify what the device actually is, its wavelengths and any FDA 510(k) record; do not repeat results claims. Imported from spreadsheet row 2. Intended for published article \"led-face-masks-what-to-compare\" — add it to that article's products list once this product is published."
 }

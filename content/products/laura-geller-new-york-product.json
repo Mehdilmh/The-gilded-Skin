@@ -1,24 +1,65 @@
 {
   "id": "laura-geller-new-york-product",
-  "name": "Laura Geller New York product (exact name and shade to confirm)",
+  "name": "Baked Balance-n-Brighten Color Correcting Foundation, 09 Toffee",
   "brand": "Laura Geller New York",
   "marketplace": "US",
   "category": "makeup",
   "amazonUrl": "https://www.amazon.com/dp/B01H1V7WV0",
   "asin": "B01H1V7WV0",
-  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
-  "keyFeatures": [],
-  "advantages": [],
-  "disadvantages": [],
-  "suits": [],
-  "skipIf": [],
-  "buyingConsiderations": [],
-  "sources": [],
-  "lastVerified": null,
-  "availabilityStatus": "unverified",
+  "editorialDescription": "A baked powder foundation made in Italy. The formula starts as a cream and is baked into a marbled, multi-tone pan that blends into one colour as you buff it on. It's the brand's signature base and comes in nine shades; this listing is 09 Toffee, one of the deeper ones. Coverage builds from sheer to medium with a natural matte finish, which suits people who like powder but not a heavy, cakey look.",
+  "keyFeatures": [
+    "Baked powder foundation made in Italy (country of origin on the listing)",
+    "Marbled multi-tone pan intended to even out redness and uneven tone",
+    "Nine shades on laurageller.com: Porcelain, Fair, Light, Medium, Golden Medium, Sand, Tan, Deep and Toffee",
+    "The listing names centella asiatica, vitamin E, green tea extract and jojoba oil",
+    "Buildable coverage, matte finish, compact packaging"
+  ],
+  "advantages": [
+    "Powder format is quick to apply and easy to carry",
+    "Buildable: one layer for light coverage, more for medium",
+    "A long-running product, so swatches and shade comparisons are easy to find"
+  ],
+  "disadvantages": [
+    "Nine shades is a narrow range, with few options for deep skin tones",
+    "Powder can emphasize dry patches or texture on very dry skin",
+    "Listing wording such as 'dermatologist-approved', 'safe for rosacea' and 'never settles into fine lines' is the brand's claim; patch-test if your skin is reactive"
+  ],
+  "suits": [
+    "People who prefer powder foundation with light-to-medium coverage",
+    "Normal, combination or oily skin that looks best with a matte finish",
+    "Anyone whose shade match is 09 Toffee"
+  ],
+  "skipIf": [
+    "You need full coverage or a dewy finish",
+    "Your skin is very dry or flaky",
+    "Your shade falls outside the nine-shade range"
+  ],
+  "buyingConsiderations": [
+    "Use Laura Geller's online shade finder before ordering; this ASIN is 09 Toffee only",
+    "Check that the seller is Laura Geller New York to avoid old or counterfeit stock",
+    "Read the full ingredient list on the box if you have sensitivities"
+  ],
+  "sources": [
+    {
+      "title": "Baked Balance-n-Brighten Foundation",
+      "publisher": "Laura Geller Beauty",
+      "url": "https://www.laurageller.com/products/baked-balance-n-brighten-foundation-free-sample",
+      "supports": "Product name and the nine-shade range",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "LAURA GELLER NEW YORK Baked Balance-n-Brighten Color Correcting Powder Foundation – 09 Toffee",
+      "publisher": "Amazon.com",
+      "url": "https://www.amazon.com/dp/B01H1V7WV0",
+      "supports": "Shade, made in Italy, named ingredients, seller (Laura Geller New York) and availability",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": "2026-10-12",
+  "availabilityStatus": "verified-available",
   "priceDisplay": "hidden",
   "editorialRating": null,
-  "linkStatus": "pending",
-  "status": "draft",
-  "researchNotes": "From a sponsored Amazon result; confirm exact product name and shade on the listing. Imported from spreadsheet row 2."
+  "linkStatus": "verified",
+  "status": "published",
+  "researchNotes": "Verified 2026-10-12. Amazon listing B01H1V7WV0 is shade 09 Toffee, sold by Laura Geller New York, and showed In Stock. Brand site lists 9 shades including Toffee. Net weight not confirmed from the brand page. 'Dermatologist-approved' and 'clinically proven safe for rosacea' appear on the listing and are not repeated as fact."
 }

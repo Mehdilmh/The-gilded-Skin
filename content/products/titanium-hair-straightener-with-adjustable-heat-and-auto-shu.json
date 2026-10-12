@@ -1,23 +1,70 @@
 {
   "id": "titanium-hair-straightener-with-adjustable-heat-and-auto-shu",
-  "name": "Titanium hair straightener with adjustable heat and auto shut-off (brand and exact name to confirm)",
+  "name": "Le Duo Grande 360° Airflow Styler (Blush)",
+  "brand": "L'ANGE HAIR",
   "marketplace": "US",
   "category": "beauty-tools",
   "amazonUrl": "https://www.amazon.com/dp/B0CD33RXR9",
   "asin": "B0CD33RXR9",
-  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
-  "keyFeatures": [],
-  "advantages": [],
-  "disadvantages": [],
-  "suits": [],
-  "skipIf": [],
-  "buyingConsiderations": [],
-  "sources": [],
-  "lastVerified": null,
-  "availabilityStatus": "unverified",
+  "editorialDescription": "A flat-iron-shaped 2-in-1 styler that straightens or curls, with air vents around the housing that cool curls as hair leaves the plates. The Grande size has longer 5.3-inch titanium plates, which L'ange recommends for hair below the shoulders. Amazon calls it Le Duo Grande; on L'ange's own site it's the Le Duo Classic in the Grande size.",
+  "keyFeatures": [
+    "Floating titanium plates with rounded edges, 5.3 × 1 in (Grande size)",
+    "Five heat settings from 280°F to 430°F",
+    "Air vents around the barrel to cool and set curls",
+    "60-minute auto shut-off",
+    "Dual voltage (100–240V), 8.2 ft cord, about 0.9 lb (brand figures)",
+    "1-year warranty"
+  ],
+  "advantages": [
+    "One tool for straight styles and curls",
+    "Longer plates cover more hair per pass on long or thick hair",
+    "Dual voltage for travel",
+    "A wide temperature range, including lower settings for fine or colour-treated hair"
+  ],
+  "disadvantages": [
+    "Curling with a flat-iron shape takes practice",
+    "430°F is very hot; use the lowest setting that works, with a heat protectant",
+    "A 60-minute auto-off leaves it on longer than many tools",
+    "Amazon mentions enhanced negative ions, but L'ange's comparison chart doesn't clearly list that feature for the Classic",
+    "The Grande size can be awkward on short hair"
+  ],
+  "suits": [
+    "Long or thick hair",
+    "People who want to curl and straighten with one tool",
+    "Travellers"
+  ],
+  "skipIf": [
+    "Your hair is at or above the shoulders (the Standard size suits that better)",
+    "You prefer a curling wand or an automatic curler",
+    "Your hair is heavily damaged"
+  ],
+  "buyingConsiderations": [
+    "Choose between the Grande and Standard sizes by hair length",
+    "This listing is the Blush colour",
+    "Check that the seller is L'ange Hair Inc.",
+    "If an ion generator matters to you, compare with Le Duo Edge or Le Duo Flex"
+  ],
+  "sources": [
+    {
+      "title": "Le Duo Classic",
+      "publisher": "L'ANGE HAIR",
+      "url": "https://langehair.com/products/le-duo",
+      "supports": "Plate size, temperature range, auto shut-off, voltage, cord, weight, warranty, size guidance",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "L'ANGE HAIR Le Duo Grande 360° Airflow Styler",
+      "publisher": "Amazon.com",
+      "url": "https://www.amazon.com/dp/B0CD33RXR9",
+      "supports": "Listing identity, colour, seller (L'ange Hair Inc.) and availability",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": "2026-10-12",
+  "availabilityStatus": "verified-available",
   "priceDisplay": "hidden",
   "editorialRating": null,
-  "linkStatus": "pending",
-  "status": "draft",
-  "researchNotes": "From a sponsored Amazon result; confirm brand and safety certifications (e.g. UL/ETL). Imported from spreadsheet row 3."
+  "linkStatus": "verified",
+  "status": "published",
+  "researchNotes": "Verified 2026-10-12. The import guessed 'titanium hair straightener'; listing B0CD33RXR9 is L'ANGE Le Duo Grande, sold by L'ange Hair Inc., In Stock. Specs from the brand's Le Duo Classic page (Grande size). Ion feature for the Classic is unclear on the brand page."
 }

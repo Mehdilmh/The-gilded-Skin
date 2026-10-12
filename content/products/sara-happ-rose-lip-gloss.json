@@ -1,24 +1,63 @@
 {
   "id": "sara-happ-rose-lip-gloss",
-  "name": "sara happ rose lip gloss (exact name to confirm)",
-  "brand": "sara happ",
+  "name": "The Rose Gold Slip: One Luxe Gloss",
+  "brand": "Sara Happ",
   "marketplace": "US",
   "category": "makeup",
   "amazonUrl": "https://www.amazon.com/dp/B01LXR6JOG",
   "asin": "B01LXR6JOG",
-  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
-  "keyFeatures": [],
-  "advantages": [],
-  "disadvantages": [],
-  "suits": [],
-  "skipIf": [],
-  "buyingConsiderations": [],
-  "sources": [],
-  "lastVerified": null,
-  "availabilityStatus": "unverified",
+  "editorialDescription": "A golden-nude lip gloss with fine shimmer, built on Sara Happ's Lip Slip base with jojoba, sweet almond and macadamia oils. The colour is sheer and the doe-foot applicator is soft, so it works as an easy everyday gloss over bare lips or lipstick. Amazon lists it as Rose Gold Luxe Gloss; it's the same 0.21 oz product.",
+  "keyFeatures": [
+    "Shade: golden nude blush with a hint of shimmer",
+    "0.21 oz tube with a cushioned doe-foot applicator",
+    "Brand ingredient list includes jojoba seed, sweet almond and macadamia seed oils, plus mineral oil, polybutene and beeswax",
+    "Sheer coverage, high-shine finish"
+  ],
+  "advantages": [
+    "A sheer, forgiving shade that works on many skin tones",
+    "Oil-rich formula feels comfortable on dry lips",
+    "The full ingredient list is published on sarahapp.com"
+  ],
+  "disadvantages": [
+    "Contains beeswax, so it isn't vegan",
+    "A sheer gloss needs reapplying; 'wears all day' is the brand's claim",
+    "Contains flavour and saccharin, which some people prefer to avoid"
+  ],
+  "suits": [
+    "Anyone who wants a subtle shimmer gloss for everyday wear",
+    "People with dry lips who dislike sticky glosses",
+    "A small gift"
+  ],
+  "skipIf": [
+    "You want opaque colour or a matte finish",
+    "You avoid animal-derived ingredients",
+    "You have a tree-nut allergy; it contains almond and macadamia oils"
+  ],
+  "buyingConsiderations": [
+    "Check that the seller is Sara Happ",
+    "Read the ingredient list if you're sensitive to flavourings or nut oils"
+  ],
+  "sources": [
+    {
+      "title": "The Rose Gold Slip",
+      "publisher": "Sara Happ",
+      "url": "https://sarahapp.com/products/the-rose-gold-slip",
+      "supports": "Shade description, size, ingredients and how to use",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "Sara Happ Rose Gold Luxe Gloss - Golden Shimmer Lip Gloss, 0.21Oz",
+      "publisher": "Amazon.com",
+      "url": "https://www.amazon.com/dp/B01LXR6JOG",
+      "supports": "Listing identity, seller (Sara Happ®) and availability",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": "2026-10-12",
+  "availabilityStatus": "verified-available",
   "priceDisplay": "hidden",
   "editorialRating": null,
-  "linkStatus": "pending",
-  "status": "draft",
-  "researchNotes": "From a sponsored Amazon result; confirm exact product name and size. Imported from spreadsheet row 3."
+  "linkStatus": "verified",
+  "status": "published",
+  "researchNotes": "Verified 2026-10-12. Amazon listing B01LXR6JOG is sold by Sara Happ® and showed In Stock. Name and ingredients taken from the brand page."
 }

@@ -1,24 +1,81 @@
 {
   "id": "thome-signature-at-home-skincare-product",
-  "name": "THOME Signature at-home skincare product (exact name to confirm)",
+  "name": "THOME The Glow Signature",
   "brand": "THOME",
   "marketplace": "US",
   "category": "beauty-tools",
   "amazonUrl": "https://www.amazon.com/dp/B0GYNSM48X",
   "asin": "B0GYNSM48X",
-  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
-  "keyFeatures": [],
-  "advantages": [],
-  "disadvantages": [],
-  "suits": [],
-  "skipIf": [],
-  "buyingConsiderations": [],
-  "sources": [],
-  "lastVerified": null,
-  "availabilityStatus": "unverified",
+  "editorialDescription": "A Korean ultrasound skincare device that you glide over skin with a gel or ampoule for about 12 minutes. THOME, run by athome Co., Ltd., sells it at Sephora in the US, and the design won a Red Dot award. The brand describes dual-frequency ultrasound with three modes. It doesn't use light, and we found no FDA 510(k) record for it, so its performance claims rest on the company's own data.",
+  "keyFeatures": [
+    "Ultrasound device; THOME's US launch materials describe 3MHz + 10MHz dual-frequency ultrasound",
+    "Three modes named by the brand: Focus (radiance), Inner (hydration) and Tension (elasticity)",
+    "About 12 minutes per session, used with THOME's Boost Ampoule or another conductive gel",
+    "137g body with an angled head; retailer listings give a 3.7V 1400mAh rechargeable battery",
+    "Described as fully waterproof for cleaning in its Red Dot design award entry"
+  ],
+  "advantages": [
+    "Comes from an established brand with mainstream US retail (Sephora), and the Amazon seller (athome corporation) matches the company behind THOME",
+    "Lightweight, cordless and waterproof, so it's easy to clean",
+    "A mode-based design keeps the routine simple"
+  ],
+  "disadvantages": [
+    "Performance claims, including the brand's 'up to 1900%' heat-shock-protein figure and firming wording, come from company data we couldn't independently verify",
+    "No FDA 510(k) record found; it is sold as a cosmetic device",
+    "Needs a gel or ampoule every session, which is an ongoing cost",
+    "Premium-priced in a category with little independent research",
+    "The official site (thome.kr) is in Korean, so English specifications come from retailers and press materials"
+  ],
+  "suits": [
+    "People who enjoy a device-based massage step and already use serums or gels",
+    "Anyone who wants a waterproof, easy-to-clean tool"
+  ],
+  "skipIf": [
+    "You want a device with FDA clearance or independent clinical evidence behind its claims",
+    "You are pregnant, have an implanted electronic device or have irritated or broken skin in the area; read the manual's cautions and ask a clinician first",
+    "You won't keep up 12-minute sessions"
+  ],
+  "buyingConsiderations": [
+    "Check that the seller is THOME's own Amazon store (athome corporation)",
+    "Make sure an English manual is included and read the cautions before first use",
+    "Treat 'firm-looking', 'glass glow' and percentage figures as marketing",
+    "Factor in the cost of Boost Ampoules or a compatible gel"
+  ],
+  "sources": [
+    {
+      "title": "THOME official site (Korean)",
+      "publisher": "athome Co., Ltd.",
+      "url": "https://thome.kr/",
+      "supports": "Brand ownership (athome Inc.) and product line",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "THOME The Glow",
+      "publisher": "Red Dot",
+      "url": "https://www.red-dot.org/project/thome-the-glow-80067",
+      "supports": "Design award and waterproof construction",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "THOME's skincare devices and device-pairing Boost Ampoules, launching at Sephora in the U.S. on August 20",
+      "publisher": "PR Newswire (via CNHI News)",
+      "url": "https://www.cnhinews.com/news/article_24ef2372-3710-5370-8db4-a1bacb066307.html",
+      "supports": "US retail launch, dual-frequency ultrasound, modes (company-reported)",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "THOME The Glow Signature, At-Home Skincare Ritual Tool for Firm-Looking",
+      "publisher": "Amazon.com",
+      "url": "https://www.amazon.com/dp/B0GYNSM48X",
+      "supports": "Listing identity, 137g weight, seller (athome corporation) and availability",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": "2026-10-12",
+  "availabilityStatus": "verified-available",
   "priceDisplay": "hidden",
   "editorialRating": null,
-  "linkStatus": "pending",
-  "status": "draft",
-  "researchNotes": "From a sponsored Amazon result; confirm whether it is a device or a topical product and avoid repeating 'firming' claims without sources. Imported from spreadsheet row 4."
+  "linkStatus": "verified",
+  "status": "published",
+  "researchNotes": "Verified 2026-10-12. Amazon listing B0GYNSM48X is sold by athome corporation and showed In Stock. No 510(k) record found in openFDA for THOME or athome. Ultrasound frequencies and modes come from THOME's press release and retailer listings (Style Korean, Shilla Duty Free); the battery figure is from a retailer listing. The '1900%' heat-shock-protein claim is mentioned only as a claim to be cautious about."
 }

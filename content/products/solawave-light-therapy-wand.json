@@ -1,24 +1,86 @@
 {
   "id": "solawave-light-therapy-wand",
-  "name": "Solawave light therapy wand (charcoal; exact name to confirm)",
+  "name": "4-in-1 Radiant Renewal Skincare Wand with Red Light Therapy (Charcoal)",
   "brand": "Solawave",
   "marketplace": "US",
   "category": "beauty-tools",
   "amazonUrl": "https://www.amazon.com/dp/B0CZSFWM74",
   "asin": "B0CZSFWM74",
-  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
-  "keyFeatures": [],
-  "advantages": [],
-  "disadvantages": [],
-  "suits": [],
-  "skipIf": [],
-  "buyingConsiderations": [],
-  "sources": [],
-  "lastVerified": null,
-  "availabilityStatus": "unverified",
+  "editorialDescription": "A handheld wand that combines a 630nm red-light panel with galvanic current, gentle warmth and vibration, used for 3 minutes on each of four areas. Unlike most red-light gadgets on Amazon, its regulatory status is easy to check: FDA 510(k) K232863 covers the Radiant Renewal Skincare Wand for facial and neck stimulation and for treating facial wrinkles with red light. Clearance isn't proof of every marketing claim, and the wand treats one small area at a time rather than the whole face at once like a mask.",
+  "keyFeatures": [
+    "Red light at 630nm (±10nm), 55 mW/cm² irradiance from 14 LEDs, per Solawave's published specifications",
+    "Galvanic current (about 200 µA), warmth up to 41°C/105.8°F and vibration massage (about 12,000 rpm)",
+    "3 minutes per area with a vibration cue, auto-off after 12 minutes; Solawave suggests 3–5 sessions a week",
+    "FDA 510(k) K232863: Radiant Renewal Skincare Wand (HD-15, HD-15A), cleared December 13, 2023, product code OHS (light-based over-the-counter wrinkle reduction)",
+    "Rechargeable with a magnetic USB cable; brand states up to 90 minutes per charge (about 7 sessions)",
+    "In the box: wand, magnetic USB charging cable, travel case, quick-start guide and manual"
+  ],
+  "advantages": [
+    "Verifiable FDA 510(k) clearance with the K number published by the brand, which makes it easier to evaluate than many unbranded red-light devices",
+    "Wavelength and irradiance are published, so you can compare it with masks on actual numbers",
+    "Small and cordless, so it fits into an existing routine and travels easily",
+    "Solawave offers 60-day returns, including opened products, and a 1-year limited warranty"
+  ],
+  "disadvantages": [
+    "Treats one small area at a time; a full routine means 12 minutes of holding and gliding, unlike a hands-free mask",
+    "The brand recommends its LightBoost Activating Serum (sold separately), which is an ongoing cost",
+    "The clearance covers red light for facial wrinkles; listing wording about depuffing, firming and seeing results in two weeks is the brand's marketing, not something FDA verified",
+    "Several contraindications rule it out for some people (see who should skip it)"
+  ],
+  "suits": [
+    "People who want to try red light on specific areas such as the forehead, around the eyes or the neck",
+    "Shoppers who prefer a device whose FDA clearance they can look up themselves",
+    "Travellers who want something smaller than a mask"
+  ],
+  "skipIf": [
+    "You are pregnant, planning a pregnancy or breastfeeding; Solawave lists these as contraindications",
+    "You have a pacemaker or other implanted medical device, epilepsy or a seizure disorder, photosensitivity, active cancer, or an allergy to aluminium or plastics",
+    "You are under 18",
+    "You've had recent injectables or facial surgery and haven't checked the waiting period with your provider",
+    "You want hands-free, whole-face sessions; a mask suits that better"
+  ],
+  "buyingConsiderations": [
+    "Confirm the listing is the 4-in-1 Radiant Renewal wand sold by Solawave (Charcoal here), not the 2-in-1 Skincare Mini or an older model",
+    "Look up K232863 in FDA's 510(k) database; remember that clearance is not FDA approval",
+    "Budget for the activating serum or a compatible water-based gel",
+    "The brand frames results around at least eight weeks of 3–5 sessions a week, so consider whether you'll keep that up",
+    "Treat 'visibly firmer', 'depuff' and timeline wording on the listing as brand claims"
+  ],
+  "sources": [
+    {
+      "title": "Science & Certifications",
+      "publisher": "Solawave",
+      "url": "https://www.solawave.co/pages/science-skincare-wand",
+      "supports": "Wavelength, irradiance, galvanic current, warmth, massage speed, session schedule, K number, warranty",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "4-in-1 Radiant Renewal Skincare Wand with Red Light Therapy",
+      "publisher": "Solawave",
+      "url": "https://www.solawave.co/products/radiant-renewal-skincare-wand-with-red-light-therapy",
+      "supports": "Colours, box contents, battery, routine, contraindications, returns",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "510(k) Premarket Notification K232863",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K232863",
+      "supports": "Device name, applicant, decision date and product code",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "Solawave 4-in-1 Red Light Therapy Wand for Face & Neck (Charcoal)",
+      "publisher": "Amazon.com",
+      "url": "https://www.amazon.com/dp/B0CZSFWM74",
+      "supports": "Listing identity, seller (SolaWave) and availability",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": "2026-10-12",
+  "availabilityStatus": "verified-available",
   "priceDisplay": "hidden",
   "editorialRating": null,
-  "linkStatus": "pending",
-  "status": "draft",
-  "researchNotes": "From a sponsored Amazon result. Well-known brand; check Solawave's official site for wavelengths and any FDA 510(k) number. Imported from spreadsheet row 2. Intended for published article \"led-face-masks-what-to-compare\" — add it to that article's products list once this product is published."
+  "linkStatus": "verified",
+  "status": "published",
+  "researchNotes": "Verified 2026-10-12. Amazon listing B0CZSFWM74 is sold by SolaWave and showed In Stock. FDA 510(k) K232863 (applicant Shenzhen Kaiyan Medical Equipment Co., Ltd., decision 2023-12-13, product code OHS) matches the brand's science page. Listing claims not repeated: 'results in as little as two weeks', 'visibly firmer', 'depuff'."
 }

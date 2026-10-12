@@ -1,24 +1,66 @@
 {
   "id": "grace-stella-patches-gift-set",
-  "name": "grace & stella patches gift set (exact name to confirm)",
+  "name": "Under Eye Patches Gift Set (12 Pairs)",
   "brand": "grace & stella",
   "marketplace": "US",
   "category": "gift-guides",
   "amazonUrl": "https://www.amazon.com/dp/B0CYCFRZKD",
   "asin": "B0CYCFRZKD",
-  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
-  "keyFeatures": [],
-  "advantages": [],
-  "disadvantages": [],
-  "suits": [],
-  "skipIf": [],
-  "buyingConsiderations": [],
-  "sources": [],
-  "lastVerified": null,
-  "availabilityStatus": "unverified",
+  "editorialDescription": "Single-use hydrogel under-eye patches in three colour-coded formulas (gold, blue and pink), sold as a 12-pair gift pack. You wear them for about 20 minutes. They mainly hydrate and cool the skin under the eyes, which can make puffiness and dryness less noticeable for a while. The listing names glycerin, sodium hyaluronate, trehalose and chondrus crispus among the ingredients, with niacinamide in the blue patches.",
+  "keyFeatures": [
+    "12 pairs across three formulas: gold, blue and pink",
+    "Gold is aimed at tired, dehydrated eyes, blue contains niacinamide for a brighter look, and pink is a hyaluronic acid moisture formula (brand descriptions)",
+    "Wear for about 20 minutes; the brand suggests chilling them in the fridge for extra cooling",
+    "Brand states the patches are vegan and cruelty-free; the listing says paraben-, phthalate- and sulfate-free"
+  ],
+  "advantages": [
+    "Three formulas in one pack, so you can try them before buying a larger size",
+    "A quick, cooling step that fits before makeup",
+    "Gift-ready packaging",
+    "Established brand with its own shop and larger refill packs"
+  ],
+  "disadvantages": [
+    "Effects are temporary; patches don't change dark circles caused by pigmentation or facial structure",
+    "Single-use, so the cost per use adds up",
+    "Wrinkle-smoothing, 'instant results' and celebrity-use claims on the listing aren't independent evidence",
+    "Patches can slide if you move around while wearing them"
+  ],
+  "suits": [
+    "Gift buyers",
+    "People who want a short hydrating step before makeup or an event",
+    "Anyone curious to compare several patch formulas"
+  ],
+  "skipIf": [
+    "You expect lasting changes to dark circles or under-eye bags",
+    "You want a reusable option",
+    "Your under-eye skin is very reactive; patch-test first"
+  ],
+  "buyingConsiderations": [
+    "grace & stella sells many variants, so confirm the pack count (12 pairs) and colour mix on the listing",
+    "Check that the seller is Grace & Stella Co.",
+    "Read the ingredient list if you're sensitive, and keep patches away from the lash line"
+  ],
+  "sources": [
+    {
+      "title": "Under Eye Masks for Puffiness and Wrinkles",
+      "publisher": "grace & stella",
+      "url": "https://www.graceandstella.com/products/feel-good-under-eye-masks",
+      "supports": "Colour formulas, wear time, fridge tip, vegan and cruelty-free status",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "grace & stella Under Eye Patches - Perfect Gifts for Women (12 Pairs)",
+      "publisher": "Amazon.com",
+      "url": "https://www.amazon.com/dp/B0CYCFRZKD",
+      "supports": "Pack size, colours, ingredients, seller (Grace & Stella Co.) and availability",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": "2026-10-12",
+  "availabilityStatus": "verified-available",
   "priceDisplay": "hidden",
   "editorialRating": null,
-  "linkStatus": "pending",
-  "status": "draft",
-  "researchNotes": "From a sponsored Amazon result; confirm what the patches are for and the set contents. Imported from spreadsheet row 3."
+  "linkStatus": "verified",
+  "status": "published",
+  "researchNotes": "Verified 2026-10-12. Amazon listing B0CYCFRZKD is sold by Grace & Stella Co. and showed In Stock. The listing's 'reduce fine lines', 'instant results' and celebrity mentions are claims and are not repeated as fact."
 }

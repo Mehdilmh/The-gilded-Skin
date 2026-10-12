@@ -1,23 +1,69 @@
 {
   "id": "automatic-rotating-curling-iron",
-  "name": "Automatic rotating curling iron (brand and exact name to confirm)",
+  "name": "TYMO CurlPro Plus Automatic Curling Iron, 1 inch (Gold Blush)",
+  "brand": "TYMO",
   "marketplace": "US",
   "category": "beauty-tools",
   "amazonUrl": "https://www.amazon.com/dp/B0DQ1DNWV1",
   "asin": "B0DQ1DNWV1",
-  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
-  "keyFeatures": [],
-  "advantages": [],
-  "disadvantages": [],
-  "suits": [],
-  "skipIf": [],
-  "buyingConsiderations": [],
-  "sources": [],
-  "lastVerified": null,
-  "availabilityStatus": "unverified",
+  "editorialDescription": "An automatic rotating curler: you clamp a section, press the button and the barrel winds the hair in, then beeps when the curl is done. The Plus version has a longer 110mm heated section for long hair and two PTC heaters. Three temperature presets keep it simple but leave little room for fine-tuning.",
+  "keyFeatures": [
+    "1-inch barrel with a 110mm heating length",
+    "Three presets: 320°F/160°C, 365°F/185°C and 410°F/210°C",
+    "8-second timer with a beep; auto-release if hair meets resistance",
+    "10-minute auto-off and a safety lock",
+    "Dual voltage (100–240V) and a 360° swivel cord",
+    "Model HC509P; 1-year warranty and 30-day returns from TYMO"
+  ],
+  "advantages": [
+    "Easier than a manual wand if you struggle with curling technique",
+    "An anti-scald cover protects fingers",
+    "A short auto-off window",
+    "Dual voltage for travel"
+  ],
+  "disadvantages": [
+    "Only three heat presets",
+    "Automatic curlers need correctly sized sections to avoid tangling",
+    "Hold claims ('72-hour' on Amazon, up to '14 days' on TYMO's site) depend on hair type and are the brand's claims",
+    "Negative-ion counts are marketing figures with little practical meaning",
+    "A fixed 1-inch barrel limits curl size"
+  ],
+  "suits": [
+    "Medium-to-long hair",
+    "Beginners who want even curls",
+    "People who style on busy mornings"
+  ],
+  "skipIf": [
+    "Your hair is very short",
+    "You want looser waves (TYMO sells a 1.5-inch version)",
+    "You want precise temperature control"
+  ],
+  "buyingConsiderations": [
+    "Confirm the barrel size (1 inch here) and colour on the listing",
+    "The Amazon seller shown was Beauty Life US through the TYMO brand store; check the brand byline",
+    "Start on the lowest preset and use a heat protectant"
+  ],
+  "sources": [
+    {
+      "title": "TYMO CURLPRO PLUS",
+      "publisher": "TYMO",
+      "url": "https://tymobeauty.com/collections/hair-curler/products/tymo-curlpro-plus",
+      "supports": "Barrel, heating length, presets, timer, auto-off, voltage, warranty and returns",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "TYMO CurlPro Plus Automatic Rotating Curling Iron, 1 Inch, Gold Blush",
+      "publisher": "Amazon.com",
+      "url": "https://www.amazon.com/dp/B0DQ1DNWV1",
+      "supports": "Listing identity, model HC509P, brand store and availability",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": "2026-10-12",
+  "availabilityStatus": "verified-available",
   "priceDisplay": "hidden",
   "editorialRating": null,
-  "linkStatus": "pending",
-  "status": "draft",
-  "researchNotes": "From a sponsored Amazon result; confirm brand and safety certifications (e.g. UL/ETL) on the listing. Imported from spreadsheet row 2."
+  "linkStatus": "verified",
+  "status": "published",
+  "researchNotes": "Verified 2026-10-12. Amazon listing B0DQ1DNWV1 (TYMO store; offer sold by Beauty Life US) showed In Stock. Specs from tymobeauty.com. Hold-time claims differ between listing (72 hours) and brand site (up to 14 days); both are treated as claims."
 }

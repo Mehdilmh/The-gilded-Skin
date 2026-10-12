@@ -1,24 +1,67 @@
 {
   "id": "mz-skin-brightening-moisturizer",
-  "name": "MZ Skin brightening moisturizer (exact name to confirm)",
+  "name": "Tint & Protect Skin Perfecting SPF 30",
   "brand": "MZ Skin",
   "marketplace": "US",
   "category": "skincare",
   "amazonUrl": "https://www.amazon.com/dp/B07V7H4X4R",
   "asin": "B07V7H4X4R",
-  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
-  "keyFeatures": [],
-  "advantages": [],
-  "disadvantages": [],
-  "suits": [],
-  "skipIf": [],
-  "buyingConsiderations": [],
-  "sources": [],
-  "lastVerified": null,
-  "availabilityStatus": "unverified",
+  "editorialDescription": "A lightly tinted daily moisturizer with SPF 30 from MZ Skin. It pairs zinc oxide with a chemical UVB filter, and adds stabilised vitamin C and cacay seed oil for a smoothing, hydrating base. There's one sheer tint, which the brand says suits fair to medium skin and may not work on deeper complexions.",
+  "keyFeatures": [
+    "SPF 30, described by the brand as broad spectrum",
+    "UV filters listed on mzskin.com: zinc oxide (nano) and ethylhexyl methoxycinnamate (octinoxate)",
+    "Stabilised vitamin C (tetrahexyldecyl ascorbate), cacay seed oil, a beta-glucan complex and sodium hyaluronate",
+    "30 mL / 1.01 fl oz; one sheer universal tint",
+    "Brand states it is vegan and not tested on animals"
+  ],
+  "advantages": [
+    "Moisturizer, sheer tint and SPF in one morning step",
+    "A single tint keeps things simple for fair-to-medium skin",
+    "Ingredients and directions are published by the brand"
+  ],
+  "disadvantages": [
+    "Only one shade, which the brand itself says may not suit deeper skin",
+    "SPF 30 only protects as labelled if you apply generously and reapply",
+    "Luxury pricing compared with many tinted sunscreens",
+    "Not mineral-only: it also contains a chemical filter"
+  ],
+  "suits": [
+    "Fair to medium skin tones that want a sheer, even tint",
+    "People who want to cut a step from their morning routine",
+    "Dry or dehydrated skin that likes a moisturizing base"
+  ],
+  "skipIf": [
+    "You have a deeper skin tone",
+    "You prefer mineral-only sunscreen or react to octinoxate",
+    "You need high-SPF protection for long outdoor exposure"
+  ],
+  "buyingConsiderations": [
+    "Check the US Drug Facts panel on the box for the active ingredients and percentages; the brand page we used is the UK edition",
+    "Check that the seller is MZ SKIN",
+    "Patch-test first if your skin is sensitive; don't use on sunburnt or broken skin",
+    "The file id says 'brightening moisturizer'; the product is the tinted SPF 30"
+  ],
+  "sources": [
+    {
+      "title": "Tint & Protect Tinted Moisturiser with SPF",
+      "publisher": "MZ Skin",
+      "url": "https://www.mzskin.com/products/tint-protect",
+      "supports": "SPF, filters, key ingredients, shade guidance, directions, vegan status",
+      "accessed": "2026-10-12"
+    },
+    {
+      "title": "MZ SKIN Tint & Protect | Skin Perfecting SPF 30 Moisturizer, 1.01 Fl Oz",
+      "publisher": "Amazon.com",
+      "url": "https://www.amazon.com/dp/B07V7H4X4R",
+      "supports": "Listing identity, size, seller (MZ SKIN.) and availability",
+      "accessed": "2026-10-12"
+    }
+  ],
+  "lastVerified": "2026-10-12",
+  "availabilityStatus": "verified-available",
   "priceDisplay": "hidden",
   "editorialRating": null,
-  "linkStatus": "pending",
-  "status": "draft",
-  "researchNotes": "From a sponsored Amazon result; confirm exact product name; avoid repeating pigmentation claims without sources. Imported from spreadsheet row 4."
+  "linkStatus": "verified",
+  "status": "published",
+  "researchNotes": "Verified 2026-10-12. The import guessed 'brightening moisturizer'; listing B07V7H4X4R is Tint & Protect SPF 30, sold by MZ SKIN., In Stock. Filters come from the UK brand page; US Drug Facts not seen. 'Instantly reduces fine lines' (Symlift) is a brand claim and not repeated."
 }
