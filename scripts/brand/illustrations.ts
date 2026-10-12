@@ -254,3 +254,28 @@ export const mirror = (id: string): Obj => ({ x, y, s = 1 }) =>
    <circle cx="0" cy="-230" r="104" fill="#EFE7DA"/>
    <path d="M-60 -290 L20 -180" stroke="#fff" stroke-width="14" opacity="0.4" stroke-linecap="round"/>
   </g>`;
+
+export const lipstick = (id: string): Obj => ({ x, y, s = 1, tint = "#B5524F", flip }) =>
+  `<g ${t(x, y, s, flip)}>
+   <rect x="-34" y="-120" width="68" height="120" rx="6" fill="url(#${id}-gold)"/>
+   <rect x="-34" y="-120" width="68" height="120" rx="6" fill="url(#${id}-shade)"/>
+   <rect x="-26" y="-170" width="52" height="54" rx="4" fill="url(#${id}-gold)"/>
+   <path d="M-22 -168 L-22 -230 L22 -258 L22 -168 Z" fill="${tint}"/>
+   <path d="M-22 -168 L-22 -230 L22 -258 L22 -168 Z" fill="url(#${id}-shade)"/>
+  </g>`;
+
+export const compact = (id: string): Obj => ({ x, y, s = 1 }) =>
+  `<g ${t(x, y, s)}>
+   <ellipse cx="0" cy="-16" rx="120" ry="34" fill="url(#${id}-gold)"/>
+   <ellipse cx="0" cy="-30" rx="112" ry="30" fill="#E8C9B5"/>
+   <ellipse cx="0" cy="-30" rx="112" ry="30" fill="url(#${id}-shade)"/>
+   <ellipse cx="-20" cy="-36" rx="40" ry="9" fill="#fff" opacity="0.35"/>
+  </g>`;
+
+export const makeupBrush = (id: string): Obj => ({ x, y, s = 1, flip }) =>
+  `<g ${t(x, y, s, flip)}>
+   <path d="M-200 -8 L40 -40" stroke="${C.espresso}" stroke-width="16" stroke-linecap="round"/>
+   <path d="M40 -40 L90 -47" stroke="url(#${id}-gold)" stroke-width="20" stroke-linecap="round"/>
+   <path d="M88 -70 C150 -90 200 -60 200 -44 C200 -26 150 0 88 -22 Z" fill="#E3CDB8"/>
+   <path d="M88 -70 C150 -90 200 -60 200 -44 C200 -26 150 0 88 -22 Z" fill="url(#${id}-shade)"/>
+  </g>`;

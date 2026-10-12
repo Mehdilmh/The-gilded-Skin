@@ -1,0 +1,23 @@
+{
+  "id": "light-therapy-anti-aging-device",
+  "name": "Light therapy anti-aging device (brand and exact name to confirm)",
+  "marketplace": "US",
+  "category": "beauty-tools",
+  "amazonUrl": "https://www.amazon.com/dp/B0FL2KZXBP",
+  "asin": "B0FL2KZXBP",
+  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
+  "keyFeatures": [],
+  "advantages": [],
+  "disadvantages": [],
+  "suits": [],
+  "skipIf": [],
+  "buyingConsiderations": [],
+  "sources": [],
+  "lastVerified": null,
+  "availabilityStatus": "unverified",
+  "priceDisplay": "hidden",
+  "editorialRating": null,
+  "linkStatus": "pending",
+  "status": "draft",
+  "researchNotes": "From a sponsored Amazon result whose title uses 'laser' and 'anti-aging result' claims. Verify what the device actually is, its wavelengths and any FDA 510(k) record; do not repeat results claims. Imported from spreadsheet row 2. Intended for published article \"led-face-masks-what-to-compare\" — add it to that article's products list once this product is published."
+}

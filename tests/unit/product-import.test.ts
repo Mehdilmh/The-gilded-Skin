@@ -49,3 +49,15 @@ describe("rowToProduct", () => {
     expect(slugify("  Café Brush™ — Pro!  ")).toBe("cafe-brush-pro");
   });
 });
+
+describe("sponsored and browse links", () => {
+  it("unwraps sponsored-result click links", () => {
+    expect(
+      parseAmazonInput("https://www.amazon.com/sspa/click?ie=UTF8&spc=x&url=%2FBrand-Name%2Fdp%2FB01H1V7WV0%2Fref%3Dsr_1_1_sspa%3Fqid%3D1%26psc%3D1"),
+    ).toEqual({ asin: "B01H1V7WV0" });
+  });
+  it("builds clean ids without repeated brands or notes", () => {
+    const r = rowToProduct({ category: "makeup", amazonLink: "B01LXR6JOG", productName: "sara happ rose lip gloss (to confirm)", brand: "sara happ" }, 2, new Set());
+    expect(r.ok && r.product.id).toBe("sara-happ-rose-lip-gloss");
+  });
+});

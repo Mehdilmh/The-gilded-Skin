@@ -1,4 +1,4 @@
-export type CategorySlug = "beauty-tools" | "skincare" | "vanity-organization" | "gift-guides";
+export type CategorySlug = "beauty-tools" | "skincare" | "vanity-organization" | "gift-guides" | "makeup";
 
 export interface Category {
   slug: CategorySlug;
@@ -9,6 +9,8 @@ export interface Category {
   intro: string;
   image: string;
   imageAlt: string;
+  /** Optional tagged link to a matching Amazon category, shown as a clearly labeled affiliate button. */
+  amazonBrowse?: { url: string; label: string };
 }
 
 export const categories: Category[] = [
@@ -59,6 +61,22 @@ export const categories: Category[] = [
       "Thoughtful gifts start with the person, not the price tag. Our guides group ideas by budget and explain who each one may suit.",
     image: "/images/photos/wrapped-gift-box-red-ribbon-beige.webp",
     imageAlt: "A small white gift box tied with a red ribbon beside a blank card on a beige background",
+  },
+  {
+    slug: "makeup",
+    name: "Makeup",
+    shortName: "Makeup",
+    seoTitle: "Makeup: Honest Guides to Complexion, Color and Tools",
+    description:
+      "Research-led makeup guides from The Gilded Skin: how to choose complexion products, color and makeup tools, with notes on who each option may suit.",
+    intro:
+      "Makeup guides are on the way. Like everything we publish, they'll explain what to compare and who each option may suit — not just what's popular.",
+    image: "/images/editorial/makeup-still-life.webp",
+    imageAlt: "Illustrated still life of a lipstick, a powder compact and a makeup brush on a cream surface",
+    amazonBrowse: {
+      url: "https://www.amazon.com/s?i=specialty-aps&bbn=16225006011&rh=n%3A%252116225006011%2Cn%3A11058281",
+      label: "Browse makeup on Amazon",
+    },
   },
 ];
 

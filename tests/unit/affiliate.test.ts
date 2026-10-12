@@ -124,3 +124,17 @@ describe("campaign tracking", () => {
     expect(() => withUtm("https://www.amazon.com/dp/B0TESTTEST", { source: "a", medium: "b", campaign: "c" })).toThrow();
   });
 });
+
+describe("category browse links", async () => {
+  const { buildBrowseLink } = await import("@/lib/affiliate");
+  it("tags Amazon category links and strips ref tracking", () => {
+    const l = buildBrowseLink("https://www.amazon.com/s?i=specialty-aps&rh=n%3A11058281&ref=nav_em_x", "gettse00-20")!;
+    expect(l.href).toBe("https://www.amazon.com/s?i=specialty-aps&rh=n%3A11058281&tag=gettse00-20");
+    expect(l.rel).toContain("sponsored");
+  });
+  it("refuses non-US or non-Amazon links and missing tags", () => {
+    expect(buildBrowseLink("https://www.amazon.co.uk/s?k=x", "gettse00-20")).toBeNull();
+    expect(buildBrowseLink("https://example.com/s?k=x", "gettse00-20")).toBeNull();
+    expect(buildBrowseLink("https://www.amazon.com/s?k=x", null)).toBeNull();
+  });
+});

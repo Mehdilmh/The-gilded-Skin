@@ -1,6 +1,7 @@
 export const primaryNav = [
   { href: "/category/skincare", label: "Skincare" },
   { href: "/category/beauty-tools", label: "Beauty Tools" },
+  { href: "/category/makeup", label: "Makeup" },
   { href: "/category/vanity-organization", label: "Vanity" },
   { href: "/category/gift-guides", label: "Gift Guides" },
   { href: "/blog", label: "All Guides" },

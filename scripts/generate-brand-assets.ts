@@ -32,9 +32,22 @@ const S = (id: string) => ({
   roller: K.roller(id), guaSha: K.guaSha(id), brush: K.brush(id), mask: K.mask(id), tray: K.tray(id),
   towel: K.towel(id), sprig: K.sprig(id), vase: K.vase(id), sphere: K.sphere(id), giftBox: K.giftBox(id),
   pouch: K.pouch(id), fridge: K.fridge(id), mirror: K.mirror(id),
+  lipstick: K.lipstick(id), compact: K.compact(id), makeupBrush: K.makeupBrush(id),
 });
 
 const scenes: Scene[] = [
+  {
+    file: "makeup-still-life.webp", w: 1200, h: 1500,
+    alt: "Illustrated still life of a lipstick, a powder compact and a makeup brush on a cream surface",
+    draw: (id, w, h) => {
+      const o = S(id); const g = h * 0.64;
+      return K.backdrop(id, w, h, { horizon: 0.64 }) +
+        K.shadow(id, w * 0.5, g + 160, 300) + o.compact({ x: w * 0.42, y: g + 170, s: 1.6 }) +
+        K.shadow(id, w * 0.72, g + 60, 60) + o.lipstick({ x: w * 0.72, y: g + 60, s: 1.5 }) +
+        o.makeupBrush({ x: w * 0.42, y: g + 300, s: 1.5 }) +
+        o.sprig({ x: w * 0.15, y: g + 40, s: 0.9 }) + K.grain(id, w, h);
+    },
+  },
   {
     file: "hero-vanity.webp", w: 1280, h: 1600,
     alt: "Illustrated vanity still life with a gold mirror, glass serum bottles on a stone plinth and a eucalyptus sprig in soft window light",
@@ -261,7 +274,9 @@ async function main() {
   const registryPath = path.join(ROOT, "content/images.json");
   const registry: Record<string, unknown>[] = fs.existsSync(registryPath) ? JSON.parse(fs.readFileSync(registryPath, "utf8")) : [];
 
+  const only = process.argv.includes("--only") ? process.argv[process.argv.indexOf("--only") + 1] : null;
   for (const [i, scene] of scenes.entries()) {
+    if (only && scene.file !== only) continue;
     const id = `s${i}`;
     const svg = wrap(id, scene.w, scene.h, scene.draw(id, scene.w, scene.h));
     const out = path.join(EDITORIAL, scene.file);
@@ -286,6 +301,7 @@ async function main() {
     console.log(`illustration ${scene.file}`);
   }
   fs.writeFileSync(registryPath, JSON.stringify(registry, null, 2) + "\n");
+  if (only) return;
   await brand();
   console.log("brand assets written");
 }

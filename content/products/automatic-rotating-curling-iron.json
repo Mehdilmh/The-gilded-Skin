@@ -1,0 +1,23 @@
+{
+  "id": "automatic-rotating-curling-iron",
+  "name": "Automatic rotating curling iron (brand and exact name to confirm)",
+  "marketplace": "US",
+  "category": "beauty-tools",
+  "amazonUrl": "https://www.amazon.com/dp/B0DQ1DNWV1",
+  "asin": "B0DQ1DNWV1",
+  "editorialDescription": "Draft — write original analysis from the brand's official specifications before publishing.",
+  "keyFeatures": [],
+  "advantages": [],
+  "disadvantages": [],
+  "suits": [],
+  "skipIf": [],
+  "buyingConsiderations": [],
+  "sources": [],
+  "lastVerified": null,
+  "availabilityStatus": "unverified",
+  "priceDisplay": "hidden",
+  "editorialRating": null,
+  "linkStatus": "pending",
+  "status": "draft",
+  "researchNotes": "From a sponsored Amazon result; confirm brand and safety certifications (e.g. UL/ETL) on the listing. Imported from spreadsheet row 2."
+}

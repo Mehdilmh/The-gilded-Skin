@@ -112,7 +112,7 @@ async function importSheet() {
   const existing = getAllProducts();
   const ids = new Set(existing.map((p) => p.id));
   const asins = new Map(existing.filter((p) => p.asin).map((p) => [p.asin!, p.id]));
-  const articles = new Map(getAllArticles().map((a) => [a.slug, a.file]));
+  const articles = new Map(getAllArticles().map((a) => [a.slug, a]));
   let created = 0;
   const problems: string[] = [];
 
@@ -138,16 +138,24 @@ async function importSheet() {
       problems.push(`row ${r}: ASIN ${product.asin} already exists as "${asins.get(product.asin!)}" — skipped`);
       continue;
     }
+    const target = article ? articles.get(article) : undefined;
+    // Published guides may only reference verified products (the audit enforces this),
+    // so for those we record the intended article and attach it when the product is published.
+    if (target && target.status === "published") {
+      product.researchNotes = `${product.researchNotes ?? ""} Intended for published article "${article}" — add it to that article's products list once this product is published.`.trim();
+    }
     fs.writeFileSync(path.join(PRODUCTS_DIR, `${product.id}.json`), JSON.stringify(product, null, 2) + "\n");
     ids.add(product.id);
     asins.set(product.asin!, product.id);
     created++;
 
     if (article) {
-      const articleFile = articles.get(article);
-      if (!articleFile) {
+      const articleFile = target?.file;
+      if (!target) {
         problems.push(`row ${r}: article "${article}" not found — product created but not attached`);
-      } else {
+      } else if (target.status === "published") {
+        problems.push(`row ${r}: "${article}" is published — attach ${product.id} after completing and publishing the product`);
+      } else if (articleFile) {
         const raw = fs.readFileSync(articleFile, "utf8");
         const parsed = matter(raw);
         const list: string[] = Array.isArray(parsed.data.products) ? parsed.data.products : [];

@@ -169,6 +169,20 @@ export function resolveProductLink(product: Product, tag: string | null = getAss
 }
 
 /**
+ * Tagged link to an Amazon category or search page (Associates permits these).
+ * Strips Amazon's internal ref/tracking parameters and applies our tag.
+ */
+export function buildBrowseLink(url: string, tag: string | null = getAssociateTag()): ResolvedAffiliateLink | null {
+  if (!tag || !isAmazonUrl(url)) return null;
+  const u = new URL(applyTag(url, tag));
+  if (u.hostname !== MARKETPLACES.US.host) return null;
+  for (const key of [...u.searchParams.keys()]) {
+    if (key === "ref" || key.startsWith("pf_rd") || key === "qid" || key === "crid" || key === "sprefix") u.searchParams.delete(key);
+  }
+  return { href: u.toString(), rel: AFFILIATE_REL, label: "Browse on Amazon (affiliate link, opens in a new tab)" };
+}
+
+/**
  * Add campaign parameters to a link to *this site* (e.g. Pinterest pins).
  * UTM parameters only ever go on our own URLs, never on Amazon links, so they
  * can't interfere with Associates tracking.

@@ -111,12 +111,12 @@ export default function HomePage() {
       {/* Categories */}
       <section aria-labelledby="explore" className="container max-w-wide py-20">
         <SectionHeading id="explore" eyebrow="Explore" title="Find your corner of the vanity" />
-        <ul className="mt-12 grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
+        <ul className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-5">
           {categories.map((c) => (
             <li key={c.slug}>
               <Link href={`/category/${c.slug}`} className="group block">
                 <div className="overflow-hidden rounded-card">
-                  <EditorialImage src={c.image} alt="" hideCredit sizes="(min-width: 1024px) 25vw, 50vw" aspect="editorial" imgClassName="transition duration-700 group-hover:scale-[1.04]" />
+                  <EditorialImage src={c.image} alt="" hideCredit sizes="(min-width: 1024px) 20vw, (min-width: 768px) 33vw, 50vw" aspect="editorial" imgClassName="transition duration-700 group-hover:scale-[1.04]" />
                 </div>
                 <p className="mt-4 font-serif text-2xl leading-tight group-hover:text-champagne-dark">{c.name}</p>
                 <p className="mt-1 hidden text-sm leading-relaxed text-espresso/70 md:block">{c.intro.split(". ")[0]}.</p>

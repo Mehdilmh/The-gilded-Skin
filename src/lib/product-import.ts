@@ -35,7 +35,9 @@ export function parseAmazonInput(input: string): { asin: string } | { error: str
   if (host !== MARKETPLACES.US.host && host !== "amazon.com") {
     return { error: `Link is for ${host}; use the US store (www.amazon.com)` };
   }
-  const asin = extractAsin(value);
+  // Sponsored-result links (/sspa/click?url=/…/dp/ASIN/…) wrap the real product path.
+  const wrapped = new URL(value).searchParams.get("url");
+  const asin = extractAsin(value) ?? (wrapped?.startsWith("/") ? extractAsin(`https://${host}${wrapped}`) : null);
   return asin ? { asin } : { error: "No product ID (ASIN) in this link — open the product page and copy its address" };
 }
 
@@ -51,6 +53,8 @@ export function normalizeCategory(input: string): CategorySlug | null {
     "vanity and organization": "vanity-organization",
     vanity: "vanity-organization",
     organization: "vanity-organization",
+    makeup: "makeup",
+    "make up": "makeup",
     "gift guides": "gift-guides",
     gifts: "gift-guides",
     gift: "gift-guides",
@@ -78,7 +82,13 @@ export function rowToProduct(row: ImportRow, rowNumber: number, existingIds: Set
   if ("error" in parsed) return { ok: false, row: rowNumber, error: parsed.error };
 
   const name = row.productName?.trim() || `Product ${parsed.asin} (name needed)`;
-  let id = slugify(row.productName?.trim() ? `${row.brand ?? ""} ${name}` : `amazon-${parsed.asin}`) || `amazon-${parsed.asin.toLowerCase()}`;
+  // ID from brand + name, without notes in parentheses and without repeating the brand.
+  const cleanName = name.replace(/\([^)]*\)/g, " ").trim();
+  const brand = row.brand?.trim() ?? "";
+  const base = row.productName?.trim()
+    ? cleanName.toLowerCase().startsWith(brand.toLowerCase()) ? cleanName : `${brand} ${cleanName}`
+    : `amazon-${parsed.asin}`;
+  let id = slugify(base) || `amazon-${parsed.asin.toLowerCase()}`;
   if (existingIds.has(id)) id = `${id}-${parsed.asin.toLowerCase()}`;
 
   const product = productSchema.parse({

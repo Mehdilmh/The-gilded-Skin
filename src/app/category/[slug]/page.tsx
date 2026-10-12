@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories, getCategory } from "@/lib/categories";
-import { getArticlesByCategory } from "@/lib/content";
+import { getAllProducts, getArticlesByCategory, getPublicProduct } from "@/lib/content";
+import { ProductCard } from "@/components/affiliate/ProductCard";
+import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
 import { pageMetadata } from "@/lib/seo";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ArticleCard } from "@/components/ui/ArticleCard";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { collectionPageJsonLd } from "@/lib/structured-data";
+import { buildBrowseLink } from "@/lib/affiliate";
+import { AFFILIATE_SHORT_DISCLOSURE, AMAZON_ASSOCIATE_DISCLOSURE } from "@/lib/site";
+import { ExternalIcon } from "@/components/ui/icons";
 
 export const dynamicParams = false;
 
@@ -39,6 +44,8 @@ export default async function CategoryPage({ params }: Params) {
   if (!category) notFound();
   const articles = getArticlesByCategory(slug);
   const others = categories.filter((c) => c.slug !== slug);
+  const products = getAllProducts().filter((p) => p.category === slug && getPublicProduct(p.id));
+  const browse = category.amazonBrowse ? buildBrowseLink(category.amazonBrowse.url) : null;
 
   return (
     <>
@@ -69,6 +76,45 @@ export default async function CategoryPage({ params }: Params) {
               .
             </p>
           </div>
+        )}
+        {products.length > 0 && (
+          <section aria-labelledby="selected-products" className="mx-auto mt-16 max-w-4xl">
+            <h2 id="selected-products" className="font-serif text-3xl md:text-4xl">
+              Selected {category.name.toLowerCase()} products
+            </h2>
+            <p className="mt-3 max-w-2xl leading-relaxed text-espresso/80">
+              Products we&rsquo;ve researched for this category, with their strengths, limitations and who may want to skip them.
+            </p>
+            <div className="mt-6">
+              <AffiliateDisclosure hasAffiliateLinks />
+            </div>
+            {products.map((p) => (
+              <ProductCard key={p.id} id={p.id} />
+            ))}
+          </section>
+        )}
+        {browse && category.amazonBrowse && (
+          <aside aria-label="Shop on Amazon" className="mx-auto mt-6 max-w-xl rounded-card border border-beige bg-white p-6 text-center" data-testid="category-browse">
+            <p className="text-sm leading-relaxed text-espresso/80">
+              Prefer to browse on your own? You can explore the {category.name.toLowerCase()} selection on Amazon.
+            </p>
+            <a
+              href={browse.href}
+              rel={browse.rel}
+              target="_blank"
+              aria-label={browse.label}
+              data-affiliate="amazon"
+              data-track="affiliate_click"
+              data-item={`category:${category.slug}`}
+              data-placement="category-browse"
+              className="btn-gold mt-4"
+            >
+              {category.amazonBrowse.label} <ExternalIcon />
+            </a>
+            <p className="mt-4 text-xs leading-relaxed text-taupe-dark">
+              Affiliate link. {AFFILIATE_SHORT_DISCLOSURE.replace("This article contains affiliate links. ", "")} {AMAZON_ASSOCIATE_DISCLOSURE}
+            </p>
+          </aside>
         )}
         <nav aria-label="Other categories" className="mt-20 border-t border-beige pt-10">
           <h2 className="eyebrow">Explore more</h2>
