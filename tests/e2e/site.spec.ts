@@ -43,6 +43,22 @@ test.describe("core pages", () => {
     expect(await page.locator("article").count()).toBeGreaterThanOrEqual(9);
   });
 
+  test("author page lists her guides and article bylines link to it", async ({ page }) => {
+    await page.goto(ARTICLE);
+    await page.getByRole("link", { name: "Elise Marlowe" }).first().click();
+    await expect(page).toHaveURL(/\/author\/elise-marlowe$/);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Elise Marlowe");
+    expect(await page.locator("article").count()).toBeGreaterThan(5);
+  });
+
+  test("article cards have Read more buttons", async ({ page }) => {
+    await page.goto("/blog");
+    const readMore = page.getByRole("link", { name: /^Read more/ });
+    expect(await readMore.count()).toBeGreaterThanOrEqual(9);
+    await readMore.first().click();
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  });
+
   for (const path of ["/about", "/contact", "/editorial-policy", "/affiliate-disclosure", "/privacy-policy", "/terms", "/cookie-policy", "/sitemap", "/search?q=sunscreen"]) {
     test(`${path} renders`, async ({ page }) => {
       const res = await page.goto(path);

@@ -1,5 +1,7 @@
 import { articleHasAffiliateLinks, getAuthor, getImage, getRelatedArticles, type Article } from "@/lib/content";
+import Link from "next/link";
 import { getCategory } from "@/lib/categories";
+import { AuthorAvatar } from "@/components/ui/AuthorAvatar";
 import { articleJsonLd, faqJsonLd } from "@/lib/structured-data";
 import { MdxContent } from "./MdxContent";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -47,8 +49,18 @@ export function ArticleView({ article }: { article: Article }) {
               <h1 className="mt-4 font-serif text-[2.4rem] leading-[1.08] md:text-display">{article.title}</h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-espresso/80">{article.excerpt}</p>
               <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <p className="text-sm">
-                  By <span className="font-medium">{author?.name ?? "The Gilded Skin"}</span>
+                <p className="flex items-center gap-2 text-sm">
+                  {author && <AuthorAvatar author={author} size="sm" />}
+                  <span>
+                    By{" "}
+                    {author ? (
+                      <Link href={author.isRealPerson ? `/author/${author.id}` : "/about"} className="font-medium hover:text-champagne-dark">
+                        {author.name}
+                      </Link>
+                    ) : (
+                      <span className="font-medium">The Gilded Skin</span>
+                    )}
+                  </span>
                   {reviewer && (
                     <>
                       {" "}

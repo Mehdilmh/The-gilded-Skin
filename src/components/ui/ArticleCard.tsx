@@ -3,6 +3,7 @@ import type { Article } from "@/lib/content";
 import { getCategory } from "@/lib/categories";
 import { EditorialImage } from "./EditorialImage";
 import { formatDate } from "@/lib/format";
+import { ArrowIcon } from "./icons";
 
 const typeLabel: Record<Article["articleType"], string> = {
   review: "Review",
@@ -45,7 +46,10 @@ export function ArticleCard({ article, variant = "default", headingLevel = "h3",
               {article.title}
             </Link>
           </H>
-          <p className="mt-1 text-xs text-taupe-dark">{article.readingMinutes} min read</p>
+          <p className="mt-1 flex items-center gap-3 text-xs text-taupe-dark">
+            <span>{article.readingMinutes} min read</span>
+            <ReadMore href={href} title={article.title} size="sm" />
+          </p>
         </div>
       </article>
     );
@@ -79,7 +83,27 @@ export function ArticleCard({ article, variant = "default", headingLevel = "h3",
         <p className="mt-4 text-xs uppercase tracking-[0.12em] text-taupe-dark">
           <time dateTime={article.updatedAt}>Updated {formatDate(article.updatedAt)}</time> · {article.readingMinutes} min read
         </p>
+        <div className="mt-5">
+          <ReadMore href={href} title={article.title} />
+        </div>
       </div>
     </article>
+  );
+}
+
+/** Visible "Read more" button with a unique accessible name per article. */
+export function ReadMore({ href, title, size = "md" }: { href: string; title: string; size?: "sm" | "md" }) {
+  return (
+    <Link
+      href={href}
+      className={
+        size === "sm"
+          ? "inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-champagne-dark hover:text-espresso"
+          : "inline-flex items-center gap-2 rounded-pill border border-espresso/25 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-espresso transition-colors hover:border-espresso hover:bg-espresso hover:text-ivory"
+      }
+    >
+      Read more<span className="sr-only">: {title}</span>
+      <ArrowIcon className="h-3.5 w-3.5" />
+    </Link>
   );
 }

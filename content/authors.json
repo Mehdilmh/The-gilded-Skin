@@ -1,5 +1,21 @@
 [
   {
+    "id": "elise-marlowe",
+    "name": "Elise Marlowe",
+    "isRealPerson": true,
+    "role": "Editor, The Gilded Skin",
+    "bio": "Elise Marlowe is the editor of The Gilded Skin. She researches beauty tools, skincare routines and vanity organization, reads the dermatology and regulatory sources behind each guide, and writes about what is worth buying and who should skip it. She is not a dermatologist, and her guides say clearly when they are based on research rather than hands-on testing.",
+    "credentials": [],
+    "sameAs": [],
+    "penName": true,
+    "focus": [
+      "Beauty tools and devices",
+      "Skincare routines",
+      "Vanity organization",
+      "Makeup trends"
+    ]
+  },
+  {
     "id": "editorial-team",
     "name": "The Gilded Skin Editors",
     "isRealPerson": false,

@@ -23,6 +23,7 @@ export const RESERVED_SLUGS = new Set([
   "about",
   "affiliate-disclosure",
   "api",
+  "author",
   "og",
   "blog",
   "category",

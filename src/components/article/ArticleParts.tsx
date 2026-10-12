@@ -5,6 +5,7 @@ import { formatDate } from "@/lib/format";
 import { PinterestIcon } from "@/components/ui/icons";
 import { absoluteUrl } from "@/lib/site";
 import { withUtm } from "@/lib/affiliate";
+import { AuthorAvatar } from "@/components/ui/AuthorAvatar";
 
 export function TableOfContents({ items }: { items: TocItem[] }) {
   const top = items.filter((i) => i.level === 2);
@@ -95,19 +96,17 @@ export function HowWeResearched({ article }: { article: Article }) {
 
 export function AuthorBox({ author, reviewer }: { author?: Author; reviewer?: Author }) {
   if (!author) return null;
+  const href = author.isRealPerson ? `/author/${author.id}` : "/about";
   return (
     <section aria-label="About the author" className="mt-12 flex gap-5 border-t border-beige pt-8">
-      <div aria-hidden="true" className="flex h-14 w-14 shrink-0 items-center justify-center rounded-pill bg-espresso font-serif text-xl text-champagne-light">
-        {author.name
-          .split(" ")
-          .filter((w) => /^[A-Z]/.test(w))
-          .slice(0, 2)
-          .map((w) => w[0])
-          .join("")}
-      </div>
+      <AuthorAvatar author={author} />
       <div>
         <p className="eyebrow">Written by</p>
-        <p className="mt-1 font-serif text-2xl">{author.name}</p>
+        <p className="mt-1 font-serif text-2xl">
+          <Link href={href} className="hover:text-champagne-dark">
+            {author.name}
+          </Link>
+        </p>
         <p className="text-sm text-taupe-dark">{author.role}</p>
         <p className="mt-3 max-w-xl text-[0.95rem] leading-relaxed text-espresso/80">{author.bio}</p>
         {author.credentials.length > 0 && <p className="mt-2 text-sm text-espresso/80">{author.credentials.join(" · ")}</p>}
@@ -116,6 +115,9 @@ export function AuthorBox({ author, reviewer }: { author?: Author; reviewer?: Au
             Reviewed by <strong className="font-medium">{reviewer.name}</strong>, {reviewer.role}
           </p>
         )}
+        <Link href={href} className="mt-4 inline-flex items-center gap-2 text-sm font-medium hover:text-champagne-dark">
+          More from {author.name.split(" ")[0]} <span aria-hidden="true">→</span>
+        </Link>
       </div>
     </section>
   );

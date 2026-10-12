@@ -47,6 +47,10 @@ describe("sitemap", () => {
     expect(urls).toContain("https://thegildedskin.com/category/beauty-tools");
   });
 
+  it("includes author pages for credited authors", () => {
+    expect(urls).toContain("https://thegildedskin.com/author/elise-marlowe");
+  });
+
   it("excludes drafts, search and studio", () => {
     for (const a of getAllArticles().filter((x) => x.status !== "published")) {
       expect(urls).not.toContain(`https://thegildedskin.com/${a.slug}`);
@@ -99,8 +103,10 @@ describe("structured data", () => {
   it("does not invent reviews, ratings, offers or people", () => {
     const text = JSON.stringify(ld);
     expect(text).not.toMatch(/AggregateRating|"Review"|"Offer"|ratingValue|"price"/);
-    // The collective editorial byline is an Organization, not a fictional Person.
-    expect((ld.author as { "@type": string })["@type"]).toBe("Organization");
+    // Bylines link to an author page; the Organization byline is only used when no person is credited.
+    const author = ld.author as { "@type": string; url?: string };
+    expect(["Person", "Organization"]).toContain(author["@type"]);
+    if (author["@type"] === "Person") expect(author.url).toMatch(/^https:\/\/thegildedskin\.com\/author\//);
   });
 
   it("only emits FAQPage when FAQ content exists", () => {

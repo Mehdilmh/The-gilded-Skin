@@ -27,6 +27,13 @@ export default function EditorialPolicyPage() {
         <li>Never promise skincare results or make unsupported medical claims.</li>
       </ul>
 
+      <h2>Who writes our guides</h2>
+      <p>
+        Guides are written and edited by our editor, <Link href="/author/elise-marlowe">Elise Marlowe</Link>. Some of our bylines are pen names; every
+        byline represents a real editor who researches and reviews the article. Pen names never come with invented credentials, testimonials or
+        experience, and our author pages only state what is true.
+      </p>
+
       <h2>How we research</h2>
       <p>
         Factual claims are supported by primary or authoritative sources — dermatology associations, government regulators such as the U.S. Food and

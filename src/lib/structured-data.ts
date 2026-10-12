@@ -64,6 +64,7 @@ function authorNode(author: Author | undefined): JsonLd {
     return {
       "@type": "Person",
       name: author.name,
+      url: absoluteUrl(`/author/${author.id}`),
       ...(author.sameAs.length ? { sameAs: author.sameAs } : {}),
       jobTitle: author.role,
     };
@@ -136,4 +137,21 @@ export function collectionPageJsonLd(name: string, description: string, path: st
 /** Serialize JSON-LD safely for inline <script> tags. */
 export function serializeJsonLd(data: JsonLd): string {
   return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
+export function authorPageJsonLd(author: Author): JsonLd {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    url: absoluteUrl(`/author/${author.id}`),
+    mainEntity: {
+      "@type": "Person",
+      name: author.name,
+      jobTitle: author.role,
+      description: author.bio,
+      url: absoluteUrl(`/author/${author.id}`),
+      worksFor: { "@id": `${site.url}/#organization` },
+      ...(author.sameAs.length ? { sameAs: author.sameAs } : {}),
+    },
+  };
 }

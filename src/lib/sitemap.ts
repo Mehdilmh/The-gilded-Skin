@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getArticlesByCategory, getPublishedArticles } from "./content";
+import { getArticlesByCategory, getAuthors, getPublishedArticles } from "./content";
 import { categories } from "./categories";
 import { absoluteUrl } from "./site";
 
@@ -34,6 +34,9 @@ export function buildSitemap(): MetadataRoute.Sitemap {
           .sort()
           .at(-1),
       })),
+    ...getAuthors()
+      .filter((au) => au.isRealPerson && articles.some((a) => a.author === au.id))
+      .map((au) => ({ url: absoluteUrl(`/author/${au.id}`), lastModified: latest })),
     ...articles.map((a) => ({
       url: absoluteUrl(`/${a.slug}`),
       lastModified: a.updatedAt,

@@ -43,7 +43,8 @@ export default function AboutPage() {
       </p>
       <h2>Who we are — and who we aren&rsquo;t</h2>
       <p>
-        We&rsquo;re a small editorial team. We are not dermatologists, doctors or a testing laboratory, and we won&rsquo;t pretend to be. Our guides
+        We&rsquo;re a small editorial team led by our editor,{" "}
+        <Link href="/author/elise-marlowe">Elise Marlowe</Link>. We are not dermatologists, doctors or a testing laboratory, and we won&rsquo;t pretend to be. Our guides
         are general information, not medical advice. For specific skin concerns, please see a board-certified dermatologist.
       </p>
       <h2>How we make money</h2>

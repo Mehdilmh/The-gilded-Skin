@@ -70,6 +70,10 @@ export const authorSchema = z.object({
   /** Only list credentials that are true and verifiable. */
   credentials: z.array(z.string()).default([]),
   sameAs: z.array(url).default([]),
+  /** Internal record: true when the byline is a pen name for a real editor. Not displayed. */
+  penName: z.boolean().default(false),
+  /** Topics shown on the author page. */
+  focus: z.array(z.string()).default([]),
 });
 export type Author = z.infer<typeof authorSchema>;
 
