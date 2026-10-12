@@ -5,6 +5,7 @@ import { AffiliateButton } from "./AffiliateButton";
 import { ProsCons, SuitsSkip } from "@/components/article/ProsCons";
 import { EditorialImage } from "@/components/ui/EditorialImage";
 import { formatDate } from "@/lib/format";
+import { StarMark } from "@/components/ui/icons";
 
 /** Shown only in development so editors can see where pending products sit. */
 function PendingProduct({ product, id }: { product?: Product; id: string }) {
@@ -33,8 +34,22 @@ export function ProductCard({ id, rank, heading }: { id: string; rank?: number; 
           {product.image ? (
             <EditorialImage src={product.image} sizes="(min-width: 768px) 40vw, 100vw" showKindLabel />
           ) : (
-            <div className="flex aspect-square items-center justify-center text-center text-sm text-taupe-dark">
-              Product image available on the retailer&rsquo;s listing
+            <div className="flex aspect-square flex-col items-center justify-center gap-4 rounded-card border border-champagne/40 bg-ivory p-6 text-center">
+              <StarMark className="h-8 w-8 text-champagne" />
+              <p className="font-serif text-xl leading-snug">{product.brand ?? product.name}</p>
+              <a
+                href={link.href}
+                rel={link.rel}
+                target="_blank"
+                aria-label={`See photos of ${product.name} on Amazon (affiliate link, opens in a new tab)`}
+                data-affiliate="amazon"
+                data-track="affiliate_click"
+                data-item={product.id}
+                data-placement="product-photos"
+                className="link-underline text-sm font-medium"
+              >
+                See product photos on Amazon
+              </a>
             </div>
           )}
         </div>

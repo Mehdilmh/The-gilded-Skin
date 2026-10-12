@@ -86,7 +86,7 @@ export default async function CategoryPage({ params }: Params) {
               Products we&rsquo;ve researched for this category, with their strengths, limitations and who may want to skip them.
             </p>
             <div className="mt-6">
-              <AffiliateDisclosure hasAffiliateLinks />
+              <AffiliateDisclosure hasAffiliateLinks context="page" />
             </div>
             {products.map((p) => (
               <ProductCard key={p.id} id={p.id} />

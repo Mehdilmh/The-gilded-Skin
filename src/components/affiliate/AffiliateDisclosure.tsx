@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AFFILIATE_SHORT_DISCLOSURE, AMAZON_ASSOCIATE_DISCLOSURE } from "@/lib/site";
 
 /** Short disclosure placed before any commercial recommendation. */
-export function AffiliateDisclosure({ hasAffiliateLinks }: { hasAffiliateLinks: boolean }) {
+export function AffiliateDisclosure({ hasAffiliateLinks, context = "article" }: { hasAffiliateLinks: boolean; context?: "article" | "page" }) {
   return (
     <aside
       aria-label="Affiliate disclosure"
@@ -11,7 +11,8 @@ export function AffiliateDisclosure({ hasAffiliateLinks }: { hasAffiliateLinks: 
     >
       {hasAffiliateLinks ? (
         <p>
-          <strong className="font-semibold text-espresso">Disclosure:</strong> {AFFILIATE_SHORT_DISCLOSURE} {AMAZON_ASSOCIATE_DISCLOSURE}{" "}
+          <strong className="font-semibold text-espresso">Disclosure:</strong>{" "}
+          {context === "page" ? AFFILIATE_SHORT_DISCLOSURE.replace("This article", "This page") : AFFILIATE_SHORT_DISCLOSURE} {AMAZON_ASSOCIATE_DISCLOSURE}{" "}
           <Link href="/affiliate-disclosure" className="link-underline">
             Learn more
           </Link>
