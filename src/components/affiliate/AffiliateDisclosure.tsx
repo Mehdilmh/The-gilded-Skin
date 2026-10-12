@@ -14,7 +14,7 @@ export function AffiliateDisclosure({ hasAffiliateLinks, context = "article" }: 
           <strong className="font-semibold text-espresso">Disclosure:</strong>{" "}
           {context === "page" ? AFFILIATE_SHORT_DISCLOSURE.replace("This article", "This page") : AFFILIATE_SHORT_DISCLOSURE} {AMAZON_ASSOCIATE_DISCLOSURE}{" "}
           <Link href="/affiliate-disclosure" className="link-underline">
-            Learn more
+            Read our affiliate disclosure
           </Link>
           .
         </p>

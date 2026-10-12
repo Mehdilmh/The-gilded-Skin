@@ -36,6 +36,10 @@ export default function AffiliateDisclosurePage() {
         <li>
           Affiliate buttons are labeled, for example &ldquo;View product on Amazon,&rdquo; with &ldquo;Affiliate link&rdquo; shown beside them.
         </li>
+        <li>
+          Some links open an Amazon search or category page rather than a single product, for example &ldquo;Shop vanity organizers on Amazon.&rdquo;
+          These are affiliate links too. We haven&rsquo;t reviewed every item in those results, and we say so beside the link.
+        </li>
         <li>Affiliate links go directly to the retailer. We don&rsquo;t hide them behind redirects or disguise them as ordinary navigation.</li>
         <li>Affiliate links are marked for search engines with <code>rel=&quot;sponsored&quot;</code>.</li>
       </ul>

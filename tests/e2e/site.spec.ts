@@ -68,6 +68,43 @@ test.describe("core pages", () => {
   }
 });
 
+test.describe("review regressions", () => {
+  test("articles render one table of contents with unique ids", async ({ page }) => {
+    for (const path of ["/at-home-ultrasonic-skin-devices", ARTICLE]) {
+      await page.goto(path);
+      await expect(page.locator("nav[aria-labelledby='toc-heading']")).toHaveCount(1);
+      const ids = await page.locator("[id]").evaluateAll((els) => els.map((e) => e.id));
+      expect(ids.length, path).toBe(new Set(ids).size);
+    }
+  });
+
+  test("category pages feature a Start here guide", async ({ page }) => {
+    await page.goto("/category/vanity-organization");
+    const pillar = page.getByTestId("category-pillar");
+    await expect(pillar.getByRole("heading", { name: "Start here" })).toBeVisible();
+    await expect(pillar.getByRole("link", { name: /^Read more/ })).toHaveAttribute("href", "/how-to-organize-a-skincare-routine");
+  });
+
+  test("primary navigation leads with the core clusters", async ({ page }, info) => {
+    test.skip(info.project.name !== "desktop", "Desktop nav");
+    await page.goto("/");
+    const labels = await page.getByRole("navigation", { name: /main|primary/i }).first().getByRole("link").allTextContents();
+    const order = ["Beauty Tools", "Skincare", "Vanity"].map((l) => labels.findIndex((t) => t.trim() === l));
+    expect(order.every((i) => i >= 0)).toBe(true);
+    expect([...order].sort((a, b) => a - b)).toEqual(order);
+  });
+
+  test("comparison tables stack into labeled cards on phones", async ({ page }, info) => {
+    test.skip(info.project.name !== "mobile", "Phone layout");
+    await page.goto("/how-to-organize-a-skincare-routine");
+    const cell = page.locator("table.responsive-table td[data-label]").first();
+    await expect(cell).toBeVisible();
+    expect(await cell.evaluate((el) => getComputedStyle(el, "::before").content)).not.toBe("none");
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    expect(overflow).toBeLessThanOrEqual(0);
+  });
+});
+
 test.describe("navigation", () => {
   test("mobile menu opens and navigates", async ({ page }, info) => {
     test.skip(info.project.name === "desktop", "Mobile/tablet only");
@@ -233,7 +270,7 @@ test.describe("trust and compliance", () => {
 });
 
 test.describe("accessibility", () => {
-  for (const path of ["/", ARTICLE, "/category/skincare", "/contact", "/blog"]) {
+  for (const path of ["/", ARTICLE, "/category/skincare", "/contact", "/blog", "/led-face-masks-what-to-compare", "/at-home-ultrasonic-skin-devices", "/author/elise-marlowe"]) {
     test(`no serious axe violations on ${path}`, async ({ page }, info) => {
       test.skip(info.project.name === "tablet", "Covered by mobile and desktop");
       await page.goto(path);
