@@ -17,7 +17,7 @@ export function Callout({ title, tone = "note", children }: { title?: string; to
 export function Checklist({ title, items }: { title?: string; items: string[] }) {
   return (
     <div className="not-prose my-8 rounded-card border border-beige bg-white p-6">
-      {title && <h4 className="font-serif text-2xl">{title}</h4>}
+      {title && <h3 className="!mt-0 font-serif text-2xl">{title}</h3>}
       <ul className="mt-4 space-y-3">
         {items.map((item) => (
           <li key={item} className="flex gap-3 text-[0.98rem] leading-relaxed">

@@ -61,8 +61,8 @@ export function ProductCard({ id, rank, heading }: { id: string; rank?: number; 
         </div>
       </div>
       <div className="border-t border-beige px-6 md:px-8">
-        <ProsCons pros={product.advantages} cons={product.disadvantages} />
-        {(product.suits.length > 0 || product.skipIf.length > 0) && <SuitsSkip suits={product.suits} skip={product.skipIf} subject="it" />}
+        <ProsCons pros={product.advantages} cons={product.disadvantages} headingLevel="h4" />
+        {(product.suits.length > 0 || product.skipIf.length > 0) && <SuitsSkip suits={product.suits} skip={product.skipIf} subject="it" headingLevel="h4" />}
       </div>
     </section>
   );

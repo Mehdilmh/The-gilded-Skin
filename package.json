@@ -2,7 +2,7 @@
   "name": "the-gilded-skin",
   "version": "1.0.0",
   "private": true,
-  "description": "The Gilded Skin — an independent beauty editorial publication.",
+  "description": "The Gilded Skin \u2014 an independent beauty editorial publication.",
   "engines": {
     "node": ">=20.9"
   },
@@ -21,7 +21,8 @@
     "content:brief": "tsx scripts/new-brief.ts",
     "pinterest:export": "tsx scripts/export-pins.ts",
     "brand:assets": "tsx scripts/generate-brand-assets.ts",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run audit:content && npm run build"
+    "check": "npm run lint && npm run typecheck && npm test && npm run audit:content && npm run audit:links && npm run build",
+    "audit:launch": "tsx scripts/audit-content.ts --launch"
   },
   "dependencies": {
     "@fontsource-variable/cormorant-garamond": "^5.3.0",
