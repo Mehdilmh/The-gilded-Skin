@@ -6,7 +6,27 @@ Source of truth: the current [Operating Agreement](https://affiliate-program.ama
 
 `AMAZON_ASSOCIATE_TAG=gettse00-20` — set in the hosting environment, read only on the server by `getAssociateTag()` in `src/lib/affiliate.ts`. Changing it there changes every link at the next build.
 
-## Adding a product
+## Adding products in bulk (Excel)
+
+```bash
+npm run products:template -- --category "beauty tools" --count 5 --article best-facial-cleansing-brushes --search "silicone facial cleansing brush"
+```
+Creates `reports/products-template.xlsx` with 5 rows. The "How to fill" sheet has a clickable Amazon search for the query. For each row, open a product on amazon.com and paste the address bar into `amazon_link` (any length; the ASIN is extracted). `product_name`, `brand` and `notes` are optional.
+
+```bash
+npm run products:import -- reports/products-template.xlsx   # also accepts .csv with the same columns
+```
+Creates a **draft** record per row in `content/products/` (untagged `amazonUrl`; the tag is applied centrally) and attaches it to the article in the `article` column. Short links (amzn.to), non-US stores, search pages and duplicate ASINs are reported and skipped.
+
+```bash
+npm run products:export   # reports/products.xlsx — every product, ASIN, tagged link, status and articles using it
+```
+
+Imported products stay hidden until someone completes the editorial fields and verifies them (steps below). The tool never fetches or scrapes Amazon and never imports prices.
+
+**Automatic product search and live prices:** PA-API 5 was retired in 2026 and replaced by Amazon's Creators API, which requires an approved Associates account with qualifying recent sales. Once you have access, add a server-only adapter (e.g. `src/lib/amazon/creators-api.ts`) behind the same product records: a `--search` mode for `products:template` that fills rows from the API, and price display with Amazon's required timestamp. Check Amazon's [Creators API documentation](https://affiliate-program.amazon.com/creatorsapi/docs/en-us/paapiv5-deprecation) for current eligibility and auth.
+
+## Adding a product by hand
 
 1. Copy `content/products/_TEMPLATE.json` to `content/products/<id>.json` (file name = `id`).
 2. Fill name/brand/specifications **from the brand's official materials**. Record each source in `sources`.

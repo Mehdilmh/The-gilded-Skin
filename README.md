@@ -68,6 +68,9 @@ All configuration is through environment variables — see [`.env.example`](.env
 | `npm run audit:links` | Affiliate link audit; add `-- --network` to request every product and source URL |
 | `npm run content:new -- <slug> "<Title>" [category] [type]` | Scaffold a draft article |
 | `npm run content:brief -- <slug> "<query>"` | Create an article brief with an overlap check |
+| `npm run products:template -- --category "beauty tools" --count 5` | Excel sheet to collect Amazon links for a category |
+| `npm run products:import -- <file.xlsx>` | Create draft product records from the filled sheet |
+| `npm run products:export` | Writes `reports/products.xlsx` with every product, tagged link and status |
 | `npm run pinterest:export` | Writes `reports/pins.csv` for bulk pin creation |
 | `npm run brand:assets` | Regenerates illustrations, PNG logos, favicon and default OG image |
 | `npm run check` | Lint, types, unit tests, audits and build in one go |
