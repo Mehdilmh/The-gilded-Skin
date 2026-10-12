@@ -21,8 +21,8 @@ export const categories: Category[] = [
       "Independent guides to cleansing brushes, LED masks, facial rollers, gua sha and other beauty tools — what they can do, what they can't, and what to compare.",
     intro:
       "Facial devices and beauty tools promise a lot. These guides explain how each type works, where the evidence is thin, and which details actually matter before you buy.",
-    image: "/images/editorial/tools-still-life.webp",
-    imageAlt: "Illustrated still life of a facial roller and gua sha stone on a cream linen surface",
+    image: "/images/photos/facial-roller-gua-sha-marble-flatlay.webp",
+    imageAlt: "A rose quartz facial roller and gua sha stone resting on a marble slab",
   },
   {
     slug: "skincare",
@@ -33,8 +33,8 @@ export const categories: Category[] = [
       "Practical, sourced guidance on building simple skincare routines, storing products well and choosing accessories that support the way you already care for your skin.",
     intro:
       "Good skincare is often simpler than the shelf suggests. Start here for routine basics, product storage and the accessories that make daily care easier.",
-    image: "/images/editorial/skincare-ritual.webp",
-    imageAlt: "Illustrated arrangement of skincare bottles and a folded towel in warm morning light",
+    image: "/images/photos/white-skincare-bottles-towels-flatlay.webp",
+    imageAlt: "Unlabeled white skincare bottles and a cream jar beside folded towels",
   },
   {
     slug: "vanity-organization",
@@ -45,8 +45,8 @@ export const categories: Category[] = [
       "Ideas and buying considerations for organizing skincare and makeup — vanity layouts, small-bathroom storage, travel cases and minimalist organizers.",
     intro:
       "A calm vanity makes a routine easier to keep. These guides cover layouts, storage that protects your products, and organizers worth considering.",
-    image: "/images/editorial/vanity-tray.webp",
-    imageAlt: "Illustrated tiered vanity tray holding glass bottles and a small vase",
+    image: "/images/photos/organized-bathroom-vanity-shelving.webp",
+    imageAlt: "An organized bathroom vanity with open shelving, folded towels and woven storage baskets beneath the counter",
   },
   {
     slug: "gift-guides",
@@ -57,8 +57,8 @@ export const categories: Category[] = [
       "Considered beauty gift ideas organized by budget and recipient, with notes on who each idea suits and what to check before buying.",
     intro:
       "Thoughtful gifts start with the person, not the price tag. Our guides group ideas by budget and explain who each one may suit.",
-    image: "/images/editorial/gift-ribbon.webp",
-    imageAlt: "Illustrated gift box tied with a champagne ribbon beside a small skincare jar",
+    image: "/images/photos/wrapped-gift-box-red-ribbon-beige.webp",
+    imageAlt: "A small white gift box tied with a red ribbon beside a blank card on a beige background",
   },
 ];
 

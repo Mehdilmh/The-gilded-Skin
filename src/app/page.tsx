@@ -88,7 +88,7 @@ export default function HomePage() {
           </div>
           <div className="relative lg:col-span-6">
             <EditorialImage
-              src="/images/editorial/hero-vanity.webp"
+              src="/images/photos/vintage-perfume-bottles-dresser-mirror.webp"
               sizes="(min-width: 1024px) 45vw, 100vw"
               priority
               aspect="editorial"
