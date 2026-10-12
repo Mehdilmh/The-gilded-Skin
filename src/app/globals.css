@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-ivory font-sans text-espresso antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif font-medium text-espresso;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    @apply bg-champagne-light text-espresso;
+  }
+  :focus-visible {
+    outline: 2px solid #7A5F2C;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-sans text-eyebrow font-semibold uppercase text-champagne-dark;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill px-6 py-3 text-sm font-medium tracking-wide transition-colors duration-200;
+  }
+  .btn-primary {
+    @apply btn bg-espresso text-ivory hover:bg-espresso-soft;
+  }
+  .btn-secondary {
+    @apply btn border border-espresso/30 text-espresso hover:border-espresso hover:bg-white;
+  }
+  .btn-gold {
+    @apply btn bg-champagne-dark text-white hover:bg-espresso;
+  }
+  .link-underline {
+    @apply underline decoration-champagne decoration-1 underline-offset-4 transition-colors hover:decoration-espresso;
+  }
+  .card {
+    @apply rounded-card bg-white shadow-soft;
+  }
+  .rule-gold {
+    @apply h-px w-12 bg-champagne;
+  }
+  .article-prose {
+    @apply prose prose-lg prose-gilded max-w-prose;
+  }
+  .article-prose :where(h2) {
+    @apply mt-14 font-serif text-3xl font-medium;
+  }
+  .article-prose :where(h3) {
+    @apply font-serif text-2xl font-medium;
+  }
+  .article-prose :where(a):not(.not-prose a) {
+    @apply font-normal underline decoration-champagne decoration-1 underline-offset-4 hover:decoration-espresso;
+  }
+  .article-prose :where(table) {
+    @apply text-base;
+  }
+  .scroll-region {
+    @apply -mx-5 overflow-x-auto px-5 md:mx-0 md:px-0;
+  }
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-card focus:bg-espresso focus:px-4 focus:py-2 focus:text-ivory;
+  }
+}

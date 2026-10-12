@@ -1,0 +1,23 @@
+{
+  "id": "travel-skincare-case-pending",
+  "name": "Travel skincare case (product to be selected)",
+  "marketplace": "US",
+  "category": "vanity-organization",
+  "editorialDescription": "Placeholder for a verified travel case for the skincare travel bag roundup. Replace once capacity, lining and dimensions are confirmed.",
+  "keyFeatures": [],
+  "advantages": [],
+  "disadvantages": [],
+  "suits": [],
+  "skipIf": [],
+  "buyingConsiderations": [
+    "Confirm interior dimensions and whether bottles stand upright",
+    "Confirm whether the lining is wipeable"
+  ],
+  "sources": [],
+  "lastVerified": null,
+  "availabilityStatus": "unverified",
+  "priceDisplay": "hidden",
+  "editorialRating": null,
+  "linkStatus": "pending",
+  "status": "draft"
+}

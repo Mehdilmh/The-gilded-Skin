@@ -1,0 +1,23 @@
+{
+  "id": "skincare-organizer-pending",
+  "name": "Small-bathroom skincare organizer (product to be selected)",
+  "marketplace": "US",
+  "category": "vanity-organization",
+  "editorialDescription": "Placeholder for a verified countertop or cabinet organizer for the small-bathroom organizer roundup. Replace once dimensions and materials are confirmed.",
+  "keyFeatures": [],
+  "advantages": [],
+  "disadvantages": [],
+  "suits": [],
+  "skipIf": [],
+  "buyingConsiderations": [
+    "Record exact external dimensions from the listing",
+    "Check whether the material is suitable for humid bathrooms"
+  ],
+  "sources": [],
+  "lastVerified": null,
+  "availabilityStatus": "unverified",
+  "priceDisplay": "hidden",
+  "editorialRating": null,
+  "linkStatus": "pending",
+  "status": "draft"
+}

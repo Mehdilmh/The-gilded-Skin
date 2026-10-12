@@ -1,0 +1,34 @@
+# Article brief: Best facial cleansing brushes: what to compare
+
+Slug: `best-facial-cleansing-brushes`
+Status: **draft**
+
+## Search
+- **Main search query:** best facial cleansing brush
+- **Search intent:** commercial
+- **Commercial intent:** high
+- **Search volume / difficulty:** research required — no live keyword data was available when this brief was written. Do not estimate.
+- **Related questions (candidate list — confirm in live SERPs):**
+  - are facial cleansing brushes good for your skin
+  - silicone vs bristle face brush
+
+## Competition notes
+- research required: review current top results and note gaps (missing limitations, missing sources, outdated information).
+
+## Existing content on this site
+- Closest existing/planned article: facial-cleansing-brushes-what-to-compare
+
+## Plan
+- **Article type:** roundup
+- **Category:** beauty-tools
+- **Differentiation strategy:** Lead with the AAD baseline (fingertips); include who should skip; compare head material and replacement costs.
+- **Internal links:** category page `/category/beauty-tools`, plus the closest related guide above.
+
+## Supporting sources
+- Use primary sources (AAD, FDA, TSA, peer-reviewed research, official brand documentation). See the published article's source list where applicable.
+
+## Products
+- Shortlist from official brand pages; verify specifications; create product records with status draft until links are generated via Associates tools and verified. No prices, ratings or review counts.
+
+## Pinterest
+- Three concepts required before publication (see the article's frontmatter).
