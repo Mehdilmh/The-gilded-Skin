@@ -116,7 +116,7 @@ export default function HomePage() {
             <li key={c.slug}>
               <Link href={`/category/${c.slug}`} className="group block">
                 <div className="overflow-hidden rounded-card">
-                  <EditorialImage src={c.image} alt="" sizes="(min-width: 1024px) 25vw, 50vw" aspect="editorial" imgClassName="transition duration-700 group-hover:scale-[1.04]" />
+                  <EditorialImage src={c.image} alt="" hideCredit sizes="(min-width: 1024px) 25vw, 50vw" aspect="editorial" imgClassName="transition duration-700 group-hover:scale-[1.04]" />
                 </div>
                 <p className="mt-4 font-serif text-2xl leading-tight group-hover:text-champagne-dark">{c.name}</p>
                 <p className="mt-1 hidden text-sm leading-relaxed text-espresso/70 md:block">{c.intro.split(". ")[0]}.</p>

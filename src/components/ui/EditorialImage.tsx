@@ -13,6 +13,8 @@ interface Props {
   aspect?: "pin" | "editorial" | "wide" | "card" | "square";
   caption?: string;
   showKindLabel?: boolean;
+  /** Omit the credit line, e.g. inside a link where a nested credit link is invalid. */
+  hideCredit?: boolean;
 }
 
 const aspectClass = {
@@ -28,14 +30,17 @@ const aspectClass = {
  * Width/height come from the registry so layout never shifts, and alt text is
  * maintained in one place.
  */
-export function EditorialImage({ src, alt, sizes, priority, className = "", imgClassName = "", aspect, caption, showKindLabel }: Props) {
+export function EditorialImage({ src, alt, sizes, priority, className = "", imgClassName = "", aspect, caption, showKindLabel, hideCredit }: Props) {
   const record = getImage(src);
   if (!record) {
     throw new Error(`Image ${src} is missing from content/images.json (rights record required)`);
   }
   const altText = alt ?? record.alt;
+  if (hideCredit && record.attributionRequired) {
+    throw new Error(`Image ${src} requires attribution and cannot be shown without its credit`);
+  }
   const credit =
-    record.source !== "original" && record.creator
+    !hideCredit && record.source !== "original" && record.creator
       ? `${record.creator} / ${record.source.charAt(0).toUpperCase()}${record.source.slice(1)}`
       : null;
   const label = record.kind === "illustration" ? "Illustration" : null;

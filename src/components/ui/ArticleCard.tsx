@@ -36,7 +36,7 @@ export function ArticleCard({ article, variant = "default", headingLevel = "h3",
     return (
       <article className="group flex gap-4">
         <Link href={href} className="w-28 shrink-0 sm:w-32" tabIndex={-1} aria-hidden="true">
-          <EditorialImage src={article.featuredImage} alt="" sizes="128px" aspect="square" imgClassName="transition duration-500 group-hover:scale-[1.03]" />
+          <EditorialImage src={article.featuredImage} alt="" hideCredit sizes="128px" aspect="square" imgClassName="transition duration-500 group-hover:scale-[1.03]" />
         </Link>
         <div>
           <p className="eyebrow">{articleTypeLabel(article.articleType)}</p>
@@ -58,6 +58,7 @@ export function ArticleCard({ article, variant = "default", headingLevel = "h3",
         <EditorialImage
           src={article.featuredImage}
           alt=""
+          hideCredit
           sizes={feature ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"}
           aspect={feature ? "editorial" : "card"}
           priority={priority}
