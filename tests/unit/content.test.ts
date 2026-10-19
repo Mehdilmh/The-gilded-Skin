@@ -169,3 +169,21 @@ describe("image rights registry", () => {
     expect(imageRecordSchema.safeParse({ ...ok, kind: "illustration", depictsSpecificProduct: true }).success).toBe(false);
   });
 });
+
+describe("scheduled publishing", () => {
+  it("hides published articles until their publish date (UTC)", async () => {
+    const { isPublic, isScheduled } = await import("@/lib/content");
+    const article = { status: "published" as const, publishedAt: "2026-10-20" };
+    expect(isPublic(article, new Date("2026-10-19T23:59:00Z"))).toBe(false);
+    expect(isScheduled(article, new Date("2026-10-19T23:59:00Z"))).toBe(true);
+    expect(isPublic(article, new Date("2026-10-20T00:00:00Z"))).toBe(true);
+    expect(isScheduled(article, new Date("2026-10-20T00:00:00Z"))).toBe(false);
+  });
+
+  it("never shows drafts, whatever the date", async () => {
+    const { isPublic, isScheduled } = await import("@/lib/content");
+    const draft = { status: "draft" as const, publishedAt: "2020-01-01" };
+    expect(isPublic(draft)).toBe(false);
+    expect(isScheduled(draft)).toBe(false);
+  });
+});

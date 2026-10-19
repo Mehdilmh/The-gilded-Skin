@@ -151,12 +151,25 @@ export function getAllArticles(): Article[] {
   return articles;
 }
 
-export function isPublic(article: Pick<Article, "status">): boolean {
-  return article.status === "published";
+/** Today's date in UTC (YYYY-MM-DD). */
+export function todayIso(now: Date = new Date()): string {
+  return now.toISOString().slice(0, 10);
+}
+
+/**
+ * Live on the site: published, and its publish date has arrived. A published
+ * article with a future `publishedAt` is scheduled — hidden until that date.
+ */
+export function isPublic(article: Pick<Article, "status" | "publishedAt">, now: Date = new Date()): boolean {
+  return article.status === "published" && article.publishedAt <= todayIso(now);
+}
+
+export function isScheduled(article: Pick<Article, "status" | "publishedAt">, now: Date = new Date()): boolean {
+  return article.status === "published" && article.publishedAt > todayIso(now);
 }
 
 export function getPublishedArticles(): Article[] {
-  return getAllArticles().filter(isPublic);
+  return getAllArticles().filter((a) => isPublic(a));
 }
 
 export function getArticle(slug: string, opts: { includeDrafts?: boolean } = {}): Article | undefined {

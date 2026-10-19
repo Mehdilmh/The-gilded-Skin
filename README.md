@@ -72,10 +72,15 @@ All configuration is through environment variables — see [`.env.example`](.env
 | `npm run products:import -- <file.xlsx>` | Create draft product records from the filled sheet |
 | `npm run products:export` | Writes `reports/products.xlsx` with every product, tagged link and status |
 | `npm run pinterest:export` | Writes `reports/pins.csv` for bulk pin creation |
+| `npm run images:fetch` | Downloads full-resolution generated images listed in `scripts/generated-images.json` and updates their records |
 | `npm run brand:assets` | Regenerates illustrations, PNG logos, favicon and default OG image |
 | `npm run check` | Lint, types, unit tests, audits and build in one go |
 
 Vector logos are built with `python3 scripts/brand/build_logo.py` (needs `pip install fonttools brotli`).
+
+## Scheduling articles
+
+Give an article `status: published` and a future `publishedAt`. It stays hidden everywhere until that date (UTC); listing pages and the sitemap re-render hourly, so it appears without a redeploy (requires running as a Node server with `npm start`).
 
 ## Project structure
 

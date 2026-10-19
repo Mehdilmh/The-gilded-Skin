@@ -14,6 +14,9 @@ import { buildBrowseLink } from "@/lib/affiliate";
 import { AFFILIATE_SHORT_DISCLOSURE, AMAZON_ASSOCIATE_DISCLOSURE } from "@/lib/site";
 import { ExternalIcon } from "@/components/ui/icons";
 
+// Re-render hourly so scheduled articles appear on their publish date without a rebuild.
+export const revalidate = 3600;
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {

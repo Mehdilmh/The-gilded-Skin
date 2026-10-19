@@ -9,6 +9,9 @@ import { ArticleCard } from "@/components/ui/ArticleCard";
 import { JsonLd } from "@/components/ui/JsonLd";
 import Link from "next/link";
 
+// Re-render hourly so scheduled articles appear on their publish date without a rebuild.
+export const revalidate = 3600;
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {

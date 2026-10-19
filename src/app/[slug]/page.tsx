@@ -4,11 +4,14 @@ import { getAllArticles, getArticle, isPublic } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 import { ArticleView } from "@/components/article/ArticleView";
 
-export const dynamicParams = false;
+// Scheduled articles are rendered on demand once their date arrives.
+export const dynamicParams = true;
+// Re-render hourly so scheduled articles appear on their publish date without a rebuild.
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return getAllArticles()
-    .filter(isPublic)
+    .filter((a) => isPublic(a))
     .map((a) => ({ slug: a.slug }));
 }
 

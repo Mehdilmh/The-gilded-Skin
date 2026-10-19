@@ -8,6 +8,9 @@ import { ArticleCard } from "@/components/ui/ArticleCard";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { collectionPageJsonLd } from "@/lib/structured-data";
 
+// Re-render hourly so scheduled articles appear on their publish date without a rebuild.
+export const revalidate = 3600;
+
 const title = "All Beauty Guides";
 const description =
   "Every guide from The Gilded Skin: research-led beauty tool comparisons, skincare routine basics, vanity organization and thoughtful gift ideas.";

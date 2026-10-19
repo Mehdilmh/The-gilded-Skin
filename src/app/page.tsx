@@ -13,6 +13,9 @@ import { NewsletterSignup } from "@/components/home/NewsletterSignup";
 import { collectionPageJsonLd } from "@/lib/structured-data";
 import { JsonLd } from "@/components/ui/JsonLd";
 
+// Re-render hourly so scheduled articles appear on their publish date without a rebuild.
+export const revalidate = 3600;
+
 export const metadata: Metadata = pageMetadata({
   title: `${site.name} — Honest Beauty Guides, Skincare Tools & Vanity Edits`,
   description:

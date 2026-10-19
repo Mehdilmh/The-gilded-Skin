@@ -10,7 +10,6 @@ import {
   getAllArticles,
   getAllProducts,
   getImageRegistry,
-  isPublic,
   plainText,
   type Article,
 } from "./content";
@@ -115,14 +114,16 @@ export function auditArticles(articles: Article[], opts: AuditOptions = {}): Aud
   const today = opts.today ?? new Date().toISOString().slice(0, 10);
   const registry = getImageRegistry();
   const products = new Map(getAllProducts().map((p) => [p.id, p]));
-  const published = articles.filter(isPublic);
+  // Scheduled articles (published, future date) are audited as published.
+  const published = articles.filter((a) => a.status === "published");
+  const releaseDate = new Map(published.map((a) => [`/${a.slug}`, a.publishedAt]));
   const publishedPaths = new Set(published.map((a) => `/${a.slug}`));
   const allPaths = new Set(articles.map((a) => `/${a.slug}`));
   const categoryPaths = new Set(categories.map((c) => `/category/${c.slug}`));
   const inbound = new Map<string, number>(published.map((a) => [a.slug, 0]));
 
   for (const a of articles) {
-    const pub = isPublic(a);
+    const pub = a.status === "published";
     const add = (level: Level, code: string, message: string) =>
       // Drafts are work in progress: downgrade their errors to info.
       issues.push({ level: pub ? level : level === "error" ? "info" : level, scope: a.slug, code, message });
@@ -177,6 +178,11 @@ export function auditArticles(articles: Article[], opts: AuditOptions = {}): Aud
       if (STATIC_ROUTES.has(link) || categoryPaths.has(link)) continue;
       if (publishedPaths.has(link)) {
         const target = link.slice(1);
+        // A link is broken if its target goes live after this article does.
+        const liveFrom = a.publishedAt > today ? a.publishedAt : today;
+        if (pub && releaseDate.get(link)! > liveFrom) {
+          add("error", "link-to-scheduled", `Links to ${link}, which goes live on ${releaseDate.get(link)} — after this article (${liveFrom})`);
+        }
         if (pub) inbound.set(target, (inbound.get(target) ?? 0) + 1);
         continue;
       }

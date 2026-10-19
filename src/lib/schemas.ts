@@ -18,7 +18,8 @@ export type Source = z.infer<typeof sourceSchema>;
 /* Images                                                               */
 /* ------------------------------------------------------------------ */
 
-export const imageKinds = ["illustration", "photograph", "product-photo", "graphic"] as const;
+/** "generated" = created for the site with an image-generation model (internal record; not labeled publicly). */
+export const imageKinds = ["illustration", "photograph", "product-photo", "graphic", "generated"] as const;
 
 export const imageRecordSchema = z
   .object({

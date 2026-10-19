@@ -3,7 +3,9 @@ import { getCategory } from "@/lib/categories";
 import { renderOgImage } from "@/lib/social-images";
 
 export const dynamic = "force-static";
-export const dynamicParams = false;
+export const dynamicParams = true;
+// Re-render hourly so scheduled articles appear on their publish date without a rebuild.
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return getPublishedArticles().map((a) => ({ slug: a.slug }));

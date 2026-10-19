@@ -20,6 +20,7 @@
     "content:new": "tsx scripts/new-article.ts",
     "content:brief": "tsx scripts/new-brief.ts",
     "pinterest:export": "tsx scripts/export-pins.ts",
+    "images:fetch": "tsx scripts/fetch-generated-images.ts",
     "brand:assets": "tsx scripts/generate-brand-assets.ts",
     "check": "npm run lint && npm run typecheck && npm test && npm run audit:content && npm run audit:links && npm run build",
     "audit:launch": "tsx scripts/audit-content.ts --launch",
