@@ -1,3 +1,22 @@
 [
-  { "source": "/how-to-organize-skincare-on-a-vanity", "destination": "/how-to-organize-a-skincare-routine", "permanent": true }
+  {
+    "source": "/how-to-organize-skincare-on-a-vanity",
+    "destination": "/how-to-organize-a-skincare-routine",
+    "permanent": true
+  },
+  {
+    "source": "/home",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/category/beauty",
+    "destination": "/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/uncategorized",
+    "destination": "/blog",
+    "permanent": true
+  }
 ]
